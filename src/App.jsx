@@ -1,13 +1,19 @@
+import { useEffect, useState } from "react";
+
 export default function App() {
   // clip-path-inset-
   // middle [0_40%_0_40%]
   // right [0_15%_0_65%]
   // closed [0_50%_0_50%]
+  const [splash, setSplash] = useState(true);
 
+  useEffect(() => {}, []);
+
+  // CTRL ALT A
   return (
     <main className="bg-palette-white h-screen w-screen bg-doodle-pattern bg-cover">
       {/* 🏔️ Mountain Clip */}
-      <div className="z-50 absolute bg-mountain-dark bg-cover h-full w-full clip-path-inset-[0_40%_0_40%] transition-[clip-path]">
+      <div className="z-50 absolute bg-mountain-dark bg-cover h-full w-full clip-path-inset-[0_40%_0_40%] active:clip-path-inset-[0_15%_0_65%] transition-[clip-path] ease-in-out duration-700">
         <section className="flex h-full justify-center place-items-center">
           {/* 🖌️ Luciano */}
           <svg
@@ -46,10 +52,16 @@ export default function App() {
       </div>
 
       {/* 🐶 Doggo Logo */}
-      <div className="absolute top-4 lg:top-[3vh] lg:left-[47.5%] lg:right-[47.5%] h-[56px] w-[56px] lg:w-[5vw] lg:h-[5vw] rounded-full bg-palette-yellow">
+      <div
+        className={
+          splash
+            ? "absolute top-4 h-14 w-14 left-[calc(50%-1.75rem)] lg:top-[3vh] lg:left-[47.5%] lg:w-[5vw] lg:h-[5vw] bg-palette-white rounded-full z-50 select-none drop-shadow-xl transition-all ease-in-out duration-500"
+            : "absolute top-4 h-14 w-14 left-[calc(50%-1.75rem)] lg:top-[3vh] lg:left-[47.5%] lg:w-[5vw] lg:h-[5vw] bg-palette-white rounded-full z-50 select-none drop-shadow-xl transition-all ease-in-out duration-500"
+        }
+      >
         <img
           src="src\assets\doggo.png"
-          className="w-[5vw] absolute top-[1.5vh]"
+          className="absolute w-14 top-3 lg:w-[5vw] lg:top-[1.5vh]"
         ></img>
       </div>
 
