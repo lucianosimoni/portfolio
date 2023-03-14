@@ -16,14 +16,26 @@ module.exports = {
             "clip-path": "inset(0 50% 0 50%)",
           },
         },
-        "large-to-small": {
-          from: {},
-          to: {},
+        "large-to-default": {
+          from: {
+            height: "32rem",
+            width: "32rem",
+            top: "calc(50% - 16rem)",
+            left: "calc(50% - 16rem)",
+          },
+        },
+        "large-to-default-doggo-img": {
+          from: {
+            width: "28rem",
+          },
         },
       },
       animation: {
-        "openning-clip": "close-clip 1s ease 1s 1 reverse both",
-        "closing-clip": "close-clip 1s ease 1s 1 normal both",
+        "openning-clip": "close-clip 1s ease 2s 1 reverse both",
+        "closing-clip": "close-clip 1s ease 2s 1 normal both",
+        "doggo-splash": "large-to-default 1s ease 1s 1 normal both",
+        "doggo-splash-img":
+          "large-to-default-doggo-img 1s ease 1s 1 normal both",
       },
       colors: {
         "palette-white": "#f7ede2",
