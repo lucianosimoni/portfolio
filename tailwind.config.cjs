@@ -29,6 +29,7 @@ module.exports = {
         },
         "large-to-default-doggo-img": {
           from: {
+            height: "16rem",
             width: "28rem",
           },
         },

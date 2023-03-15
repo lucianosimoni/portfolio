@@ -68,7 +68,7 @@ export default function App() {
       <div className="animate-doggo-splash absolute flex items-center top-4 h-14 w-14 left-[calc(50%-1.75rem)] bg-palette-white rounded-full z-50 select-none drop-shadow-xl transition-all">
         <img
           src={doggoImage}
-          className="animate-doggo-splash-img w-14 lg:w-[5vw]"
+          className="animate-doggo-splash-img h-8 w-14 lg:w-[5vw]"
         ></img>
       </div>
 
