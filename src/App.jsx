@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import doggoImage from "./assets/doggo.png";
 
 export default function App() {
   // clip-path-inset-
@@ -66,7 +67,7 @@ export default function App() {
       {/* 🐶 Doggo Logo */}
       <div className="animate-doggo-splash absolute flex items-center top-4 h-14 w-14 left-[calc(50%-1.75rem)] bg-palette-white rounded-full z-50 select-none drop-shadow-xl transition-all">
         <img
-          src="src\assets\doggo.png"
+          src={doggoImage}
           className="animate-doggo-splash-img w-14 lg:w-[5vw]"
         ></img>
       </div>
