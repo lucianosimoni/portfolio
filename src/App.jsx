@@ -9,15 +9,23 @@ export default function App() {
 
   useEffect(() => {
     setTimeout(() => {
-      setSplash(true);
-    }, 1000);
+      setSplash(false);
+    }, 3000);
   }, []);
 
-  // CTRL ALT A
+  const classesMountainClip =
+    "z-50 absolute bg-mountain-dark bg-cover h-full w-full clip-path-inset-[0_40%_0_40%] active:clip-path-inset-[0_15%_0_65%] transition-all duration-700";
+
   return (
     <main className="bg-palette-white h-screen w-screen bg-doodle-pattern bg-cover">
       {/* 🏔️ Mountain Clip */}
-      <div className="animate-openning-clip z-50 absolute bg-mountain-dark bg-cover h-full w-full clip-path-inset-[0_40%_0_40%] active:clip-path-inset-[0_15%_0_65%] transition-[clip-path]">
+      <div
+        className={
+          splash
+            ? classesMountainClip + " animate-openning-clip "
+            : classesMountainClip
+        }
+      >
         <section className="flex h-full justify-center place-items-center">
           {/* 🖌️ Luciano */}
           <svg

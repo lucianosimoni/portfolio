@@ -9,10 +9,13 @@ module.exports = {
     extend: {
       keyframes: {
         "close-clip": {
-          from: {
+          "0%": {
             "clip-path": "inset(0 40% 0 40%)",
           },
-          to: {
+          "20%": {
+            "clip-path": "inset(0 39% 0 39%)",
+          },
+          "100%": {
             "clip-path": "inset(0 50% 0 50%)",
           },
         },
@@ -23,12 +26,6 @@ module.exports = {
             top: "calc(50% - 16rem)",
             left: "calc(50% - 16rem)",
           },
-          to: {
-            height: "3.5rem",
-            width: "3.5rem",
-            top: "1rem",
-            left: "calc(50%-1.75rem)",
-          },
         },
         "large-to-default-doggo-img": {
           from: {
@@ -37,11 +34,11 @@ module.exports = {
         },
       },
       animation: {
-        "openning-clip": "close-clip 1s ease 2s 1 reverse backwards",
-        "closing-clip": "close-clip 1s ease 2s 1 normal backwards",
-        "doggo-splash": "large-to-default 1s ease 1s 1 normal backwards",
+        "openning-clip": "close-clip 1s ease-in 2s 1 reverse backwards",
+        "closing-clip": "close-clip 1s ease-in-out 0s 1 normal backwards",
+        "doggo-splash": "large-to-default 1s ease-in 1s 1 normal backwards",
         "doggo-splash-img":
-          "large-to-default-doggo-img 1s ease 1s 1 normal backwards",
+          "large-to-default-doggo-img 1s ease-in 1s 1 normal backwards",
       },
       colors: {
         "palette-white": "#f7ede2",
