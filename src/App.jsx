@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import doggoImage from "./assets/doggo.png";
+import doggoImage from "./assets/doggo.webp";
 
 export default function App() {
   // clip-path-inset-

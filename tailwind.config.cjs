@@ -3,8 +3,8 @@ module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     backgroundImage: {
-      "doodle-pattern": "url('/src/assets/doodle-pattern.png')",
-      "mountain-dark": "url('/src/assets/mountain-dark.png')",
+      "doodle-pattern": "url('/src/assets/doodle-pattern.webp')",
+      "mountain-dark": "url('/src/assets/mountain-dark.webp')",
     },
     extend: {
       keyframes: {
