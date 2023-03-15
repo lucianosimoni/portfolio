@@ -10,10 +10,7 @@ module.exports = {
       keyframes: {
         "close-clip": {
           "0%": {
-            "clip-path": "inset(0 40% 0 40%)",
-          },
-          "20%": {
-            "clip-path": "inset(0 39% 0 39%)",
+            "clip-path": "inset(0 calc(50%-128px) 0 calc(50%-128px))",
           },
           "100%": {
             "clip-path": "inset(0 50% 0 50%)",
@@ -30,13 +27,14 @@ module.exports = {
         "large-to-default-doggo-img": {
           from: {
             height: "16rem",
-            width: "28rem",
           },
         },
       },
       animation: {
-        "openning-clip": "close-clip 1s ease-in 2s 1 reverse backwards",
-        "closing-clip": "close-clip 1s ease-in-out 0s 1 normal backwards",
+        "openning-clip":
+          "close-clip 1s cubic-bezier(0.5, 0, 0.5, 1) 2s 1 reverse backwards",
+        "closing-clip":
+          "close-clip 1s cubic-bezier(0.5, 0, 0.5, 1) 0s 1 normal backwards",
         "doggo-splash": "large-to-default 1s ease-in 1s 1 normal backwards",
         "doggo-splash-img":
           "large-to-default-doggo-img 1s ease-in 1s 1 normal backwards",
