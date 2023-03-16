@@ -21,8 +21,8 @@ export default function App() {
       <div
         className={
           splash
-            ? "animate-openning-clip z-50 absolute bg-mountain-dark bg-cover h-screen w-full clip-path-inset-[0_calc(50%-128px)_0_calc(50%-128px)] transition-all"
-            : "z-50 absolute bg-mountain-dark bg-cover h-screen w-full clip-path-inset-[0_calc(50%-128px)_0_calc(50%-128px)] transition-all"
+            ? "animate-openning-clip z-50 absolute bg-mountain-dark bg-cover h-screen w-full clip-path-inset-[0_calc(50%-128px)_0_calc(50%-128px)] transition-[clip-path-inset]"
+            : "z-50 absolute bg-mountain-dark bg-cover h-screen w-full clip-path-inset-[0_calc(50%-128px)_0_calc(50%-128px)] transition-[clip-path-inset]"
         }
       >
         <section className="flex h-full justify-center place-items-center">
@@ -32,7 +32,13 @@ export default function App() {
       </div>
 
       {/* 🐶 Doggo Logo */}
-      <div className="animate-doggo-splash top-4 h-16 w-16 left-[calc(50%-2rem)] bg-palette-white rounded-full z-50 absolute flex items-center justify-center select-none drop-shadow-xl transition-all">
+      <div
+        className={
+          splash
+            ? "animate-doggo-splash top-4 h-16 w-16 left-[calc(50%-2rem)] bg-palette-white rounded-full z-50 absolute flex items-center justify-center select-none drop-shadow-xl transition-all"
+            : "top-4 h-16 w-16 left-[calc(50%-2rem)] bg-palette-white rounded-full z-50 absolute flex items-center justify-center select-none drop-shadow-xl transition-all"
+        }
+      >
         <img
           src={doggoImage}
           alt="An image of a Doggo"

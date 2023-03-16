@@ -31,10 +31,8 @@ module.exports = {
         },
       },
       animation: {
-        "openning-clip":
-          "close-clip 1s cubic-bezier(0.5, 0, 0.5, 1) 2s 1 reverse backwards",
-        "closing-clip":
-          "close-clip 1s cubic-bezier(0.5, 0, 0.5, 1) 0s 1 normal backwards",
+        "openning-clip": "close-clip 1s ease-in 2s 1 reverse backwards",
+        "closing-clip": "close-clip 1s ease-in-out 0s 1 normal backwards",
         "doggo-splash": "large-to-default 1s ease-in 1s 1 normal backwards",
         "doggo-splash-img":
           "large-to-default-doggo-img 1s ease-in 1s 1 normal backwards",
