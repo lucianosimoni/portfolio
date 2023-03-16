@@ -29,6 +29,14 @@ module.exports = {
             height: "16rem",
           },
         },
+        "fade-in": {
+          from: {
+            opacity: "0%",
+          },
+          to: {
+            opacity: "100%",
+          },
+        },
       },
       animation: {
         "openning-clip": "close-clip 1s ease-in 2s 1 reverse backwards",
@@ -36,6 +44,8 @@ module.exports = {
         "doggo-splash": "large-to-default 1s ease-in 1s 1 normal backwards",
         "doggo-splash-img":
           "large-to-default-doggo-img 1s ease-in 1s 1 normal backwards",
+        "opacity-fade-in": "fade-in 1s ease-in-out 2s 1 normal backwards",
+        "opacity-fade-out": "fade-in 1s ease-in-out 2s 1 reverse backwards",
       },
       colors: {
         "palette-white": "#f7ede2",

@@ -31,6 +31,31 @@ export default function App() {
         </section>
       </div>
 
+      {/* 🔽 Down Arrow */}
+      <div
+        className={
+          splash
+            ? "animate-opacity-fade-in z-50 absolute bottom-4 w-full flex items-center justify-center align-middle transition-all"
+            : "animate-pulse z-50 absolute bottom-4 w-full flex items-center justify-center align-middle transition-all"
+        }
+      >
+        <svg
+          width="88"
+          height="48"
+          fill="none"
+          className="hover:scale-110 cursor-pointer drop-shadow-2xl text-palette-white flex justify-center transition-[transform]"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M10 10 L44 40 L78 10"
+            stroke="currentColor"
+            stroke-width="4"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </div>
+
       {/* 🐶 Doggo Logo */}
       <div
         className={
