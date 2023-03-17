@@ -16,16 +16,16 @@ export default function App() {
   }, []);
 
   return (
-    <main className="bg-palette-white h-screen w-screen bg-doodle-pattern bg-cover">
+    <main className="bg-palette-white bg-center h-screen w-screen bg-doodle-pattern bg-cover">
       {/* 🏔️ Mountain Clip */}
       <div
         className={
           splash
-            ? "animate-openning-clip z-50 absolute bg-mountain-dark bg-cover h-screen w-full clip-path-inset-[0_calc(50%-128px)_0_calc(50%-128px)] transition-[clip-path-inset]"
-            : "z-50 absolute bg-mountain-dark bg-cover h-screen w-full clip-path-inset-[0_calc(50%-128px)_0_calc(50%-128px)] transition-[clip-path-inset]"
+            ? "animate-openning-clip z-50 contrast-125 absolute bg-mountain-dark bg-cover h-screen w-full clip-path-inset-[0_calc(50%-128px)_0_calc(50%-128px)] transition-[clip-path-inset]"
+            : "z-50 contrast-125 absolute bg-mountain-dark bg-cover h-screen w-full clip-path-inset-[0_calc(50%-128px)_0_calc(50%-128px)] transition-[clip-path-inset]"
         }
       >
-        <section className="flex h-full justify-center place-items-center">
+        <section className="flex h-full justify-center items-center">
           {/* 🖌️ Luciano */}
           <LucianoSvg colorClass={"text-palette-white"} />
         </section>
@@ -75,7 +75,7 @@ export default function App() {
         />
       </div>
 
-      <section className="flex h-full justify-center place-items-center">
+      <section className="flex h-full justify-center items-center">
         {/* 🖌️ Luciano */}
         <LucianoSvg colorClass={"text-palette-green"} />
       </section>
