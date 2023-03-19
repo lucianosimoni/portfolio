@@ -51,8 +51,10 @@ export default function App() {
         <div
           className={
             splash
-              ? "animate-opacity-fade-in z-50 absolute bottom-4 w-full flex items-center justify-center align-middle transition-[animation]"
-              : "animate-pulse z-50 absolute bottom-4 w-full flex items-center justify-center align-middle transition-[animation]"
+              ? "animate-opacity-fade-in-2s-delay z-50 absolute left-[calc(50%-2.75rem)] bottom-4 transition-[left] ease-in-out duration-1000"
+              : homeVisible
+              ? "left-[calc(100%-11rem-8rem-2.75rem)] animate-pulse z-50 absolute bottom-4 transition-[left] ease-in-out duration-1000"
+              : "animate-pulse z-50 absolute left-[calc(50%-2.75rem)] bottom-4 transition-[left] ease-in-out duration-1000"
           }
         >
           <svg
