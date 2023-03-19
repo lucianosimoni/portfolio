@@ -10,7 +10,7 @@ module.exports = {
       keyframes: {
         "close-clip": {
           "0%": {
-            "clip-path": "inset(0 calc(50%-128px) 0 calc(50%-128px))",
+            "clip-path": "inset(0 calc(50%-8rem) 0 calc(50%-8rem))",
           },
           "100%": {
             "clip-path": "inset(0 50% 0 50%)",
@@ -45,7 +45,11 @@ module.exports = {
         "doggo-splash-img":
           "large-to-default-doggo-img 1s ease-in 1s 1 normal backwards",
         "opacity-fade-in": "fade-in 1s ease-in-out 2s 1 normal backwards",
+        "opacity-fade-in-instant":
+          "fade-in 1s ease-in-out 0s 1 normal backwards",
         "opacity-fade-out": "fade-in 1s ease-in-out 2s 1 reverse backwards",
+        "opacity-fade-out-instant":
+          "fade-in 1s ease-in-out 0s 1 reverse backwards",
       },
       colors: {
         "palette-white": "#f7ede2",

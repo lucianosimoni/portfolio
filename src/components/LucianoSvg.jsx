@@ -1,9 +1,16 @@
-export default function LucianoSvg({ colorClass }) {
+export default function LucianoSvg({ colorClass, homeVisible = false }) {
+  // homeVisible is only used if we want the text o move left when homeVisible is true
   return (
     <svg
       viewBox="0 0 525 139"
       fill="none"
-      className={colorClass + " h-[9rem]"}
+      className={
+        homeVisible
+          ? colorClass +
+            " left-[2rem] top-[7rem] absolute h-[9rem] transition-[top_left] ease-in-out duration-1000"
+          : colorClass +
+            " left-[calc(50%-17rem)] top-[calc(50%-4.5rem)] absolute h-[9rem] transition-[top_left] ease-in-out duration-1000 "
+      }
       xmlns="http://www.w3.org/2000/svg"
     >
       <g filter="url(#filter0_d_129_478)">
