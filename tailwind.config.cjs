@@ -71,7 +71,17 @@ module.exports = {
         "palette-black": "#14213d",
       },
       dropShadow: {
-        "button-action": "-0.5rem 0.5rem 0 #14213d",
+        "btn-thick": "-0.5rem 0.5rem 0 #14213d",
+        "btn-thick-hover": "-0.25rem 0.25rem 0 #14213d",
+      },
+      boxShadow: {
+        "btn-thick": "-0.5rem 0.5rem 0 #14213d",
+        "btn-thick-hover": "-0.25rem 0.25rem 0 #14213d",
+        "btn-thick-click": "0rem 0rem 0 #14213d",
+      },
+      spacing: {
+        "btn-hover": "0.25rem",
+        "btn-click": "0.5rem",
       },
     },
   },

@@ -18,8 +18,8 @@ export default function App() {
   }, []);
 
   const handleMainClick = (event) => {
-    if (!splash) {
-      setHomeVisible(!homeVisible);
+    if (!splash && !homeVisible) {
+      setHomeVisible(true);
     }
   };
 
@@ -117,16 +117,18 @@ export default function App() {
                 <h2 className="text-[2rem] lg:text-[3rem] font-bold text-palette-yellow drop-shadow-lg">
                   Full-stack Developer
                 </h2>
-                <p className="text-[1rem] lg:text-[1.5rem] break-words w-[50%]">
+                <p className="text-[1rem] lg:text-[1.5rem] break-words w-[50%] mb-[1rem]">
                   Based in London. Fascinated with problem-solving. Always
                   providing a code with the future in mind.
                 </p>
                 {/* 🔘 Action Buttons */}
-                <div>
-                  <button className="drop-shadow-button-action bg-palette-yellow border-2 border-palette-black rounded-full py-1 px-5">
+                <div className="flex gap-[1rem] p-2">
+                  <button className="shadow-btn-thick hover:shadow-btn-thick-hover active:shadow-btn-thick-click hover:-translate-x-btn-hover hover:translate-y-btn-hover active:-translate-x-btn-click active:translate-y-btn-click transform-gpu bg-palette-yellow border-2 border-palette-black font-bold rounded-full py-1 px-5 transition-[box-shadow_translate] duration-200">
                     Projects
                   </button>
-                  <button>Contact</button>
+                  <button className="border-[0.125rem] border-palette-black font-bold rounded-full py-1 px-5">
+                    Contact
+                  </button>
                 </div>
               </div>
             ) : null}
