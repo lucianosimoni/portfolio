@@ -15,14 +15,14 @@ export default function MobileSplash() {
         <a
           target={"_blank"}
           href="https://github.com/lucianosimoni"
-          className=" border-palette-black drop-shadow-button-action bg-palette-yellow border-2 rounded-full py-1 px-5 animate-opacity-fade-in-3s-delay"
+          className="animate-opacity-fade-in-3s-delay drop-shadow-button-action bg-palette-yellow border-2 border-palette-black rounded-full py-1 px-5"
         >
           <b>GitHub</b>
         </a>
         <a
           target={"_blank"}
           href="https://www.linkedin.com/in/luciano-simoni/"
-          className=" border-palette-black drop-shadow-button-action bg-palette-yellow border-2 rounded-full py-1 px-5 animate-opacity-fade-in-3s-delay"
+          className="animate-opacity-fade-in-3s-delay drop-shadow-button-action bg-palette-yellow border-2 border-palette-black rounded-full py-1 px-5"
         >
           <b>LinkedIn</b>
         </a>

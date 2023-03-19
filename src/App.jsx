@@ -15,11 +15,13 @@ export default function App() {
     setTimeout(() => {
       setSplash(false);
     }, 3000);
-
-    setTimeout(() => {
-      setHomeVisible(true);
-    }, 5000);
   }, []);
+
+  const handleMainClick = (event) => {
+    if (!splash) {
+      setHomeVisible(!homeVisible);
+    }
+  };
 
   return (
     <>
@@ -27,104 +29,131 @@ export default function App() {
       <MobileSplash />
 
       {/* 📺 Medium and Rest of screens */}
-      <main className="bg-palette-white bg-center h-screen w-screen bg-doodle-pattern bg-cover">
-        {/* 🏔️ Mountain Clip */}
-        <div
-          className={
-            splash
-              ? "animate-openning-clip z-50 contrast-125 absolute bg-mountain-dark bg-cover h-screen w-full clip-path-inset-[0_calc(50%-8rem)_0_calc(50%-8rem)] transition-[clip-path] ease-in-out duration-1000"
-              : homeVisible
-              ? "z-50 contrast-125 absolute bg-mountain-dark bg-cover h-screen w-full clip-path-inset-[0_11rem_0_calc(100%-11rem-16rem)] transition-[clip-path] ease-in-out duration-1000"
-              : "z-50 contrast-125 absolute bg-mountain-dark bg-cover h-screen w-full clip-path-inset-[0_calc(50%-8rem)_0_calc(50%-8rem)] transition-[clip-path] ease-in-out duration-1000"
-          }
+      <div id="section-wrapper">
+        {/* MAIN SECTION */}
+        <section
+          onClick={handleMainClick}
+          className="bg-palette-white bg-center h-screen w-100% bg-doodle-pattern bg-cover"
         >
-          <section className="flex h-full justify-center items-center">
-            {/* 🖌️ Luciano */}
-            <LucianoSvg
-              colorClass={"text-palette-white"}
-              homeVisible={homeVisible}
-            />
-          </section>
-        </div>
-
-        {/* 🔽 Down Arrow */}
-        <div
-          className={
-            splash
-              ? "animate-opacity-fade-in-2s-delay z-50 absolute left-[calc(50%-2.75rem)] bottom-4 transition-[left] ease-in-out duration-1000"
-              : homeVisible
-              ? "left-[calc(100%-11rem-8rem-2.75rem)] animate-pulse z-50 absolute bottom-4 transition-[left] ease-in-out duration-1000"
-              : "animate-pulse z-50 absolute left-[calc(50%-2.75rem)] bottom-4 transition-[left] ease-in-out duration-1000"
-          }
-        >
-          <svg
-            width="88"
-            height="48"
-            fill="none"
-            className="hover:scale-110 cursor-pointer drop-shadow-2xl text-palette-white flex justify-center transition-[transform]"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M10 10 L44 40 L78 10"
-              stroke="currentColor"
-              strokeWidth="4"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </div>
-
-        {/* 🐶 Doggo Logo */}
-        <div
-          className={
-            splash
-              ? "animate-doggo-splash top-4 h-16 w-16 left-[calc(50%-2rem)] bg-palette-white rounded-full z-50 absolute flex items-center justify-center select-none drop-shadow-xl transition-[left]"
-              : homeVisible
-              ? "top-4 h-16 w-16 left-[calc(100%-11rem-8rem-2rem)] bg-palette-white rounded-full z-50 absolute flex items-center justify-center select-none drop-shadow-xl transition-[left] duration-1000"
-              : "top-4 h-16 w-16 left-[calc(50%-2rem)] bg-palette-white rounded-full z-50 absolute flex items-center justify-center select-none drop-shadow-xl transition-[left]"
-          }
-        >
-          <img
-            src={doggoImage}
-            alt="An image of a Doggo"
+          {/* 🏔️ Mountain Clip */}
+          <div
             className={
               splash
-                ? "animate-doggo-splash-img transition-[animation] h-[2rem]"
-                : "transition-[animation] h-[2rem]"
+                ? "clip-path-inset-[0_calc(50%-8rem)_0_calc(50%-8rem)] animate-openning-clip z-50 contrast-125 absolute bg-mountain-dark bg-cover h-screen w-full transition-[clip-path] ease-in-out duration-1000"
+                : homeVisible
+                ? "clip-path-inset-[0_11rem_0_calc(100%-11rem-20%)] z-50 contrast-125 absolute bg-mountain-dark bg-cover h-screen w-full transition-[clip-path] ease-in-out duration-1000"
+                : "clip-path-inset-[0_calc(50%-8rem)_0_calc(50%-8rem)] z-50 contrast-125 absolute bg-mountain-dark bg-cover h-screen w-full transition-[clip-path] ease-in-out duration-1000"
             }
-          />
-        </div>
+          >
+            <section className="flex h-full justify-center items-center">
+              {/* 🖌️ Luciano */}
+              <LucianoSvg
+                colorClass={"text-palette-white"}
+                homeVisible={homeVisible}
+              />
+            </section>
+          </div>
 
-        <section
-          className={
-            homeVisible
-              ? "flex flex-col h-full justify-center items-center transition-all duration-1000"
-              : "flex flex-col h-full justify-center items-center transition-all duration-1000"
-          }
-        >
-          {/* 🖌️ Luciano */}
-          <LucianoSvg
-            colorClass={"text-palette-green"}
-            homeVisible={homeVisible}
-          />
+          {/* 🔽 Down Arrow */}
+          <div
+            className={
+              splash
+                ? "-rotate-90 animate-opacity-fade-in-2s-delay z-50 absolute left-[calc(50%-2.75rem)] bottom-4 transition-[left] ease-in-out duration-1000"
+                : homeVisible
+                ? "rotate-0 left-[calc(100%-11rem-10%-2.75rem)] animate-pulse z-50 absolute bottom-4 transition-[left_rotate] ease-in-out duration-1000"
+                : "-rotate-90 animate-pulse z-50 absolute left-[calc(50%-2.75rem)] bottom-4 transition-[left] ease-in-out duration-1000"
+            }
+          >
+            <svg
+              width="88"
+              height="48"
+              fill="none"
+              className="hover:scale-110 cursor-pointer drop-shadow-2xl text-palette-white flex justify-center transition-[transform]"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10 10 L44 40 L78 10"
+                stroke="currentColor"
+                strokeWidth="4"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </div>
 
-          {/* 🏡 Home Section */}
-          {homeVisible ? (
-            <div className="animate-opacity-fade-in-0s-delay">
-              <h2>Full-stack Developer</h2>
-              <p>
-                Based in London. Fascinated with problem-solving. Always
-                providing a code with the future in mind.
-              </p>
-              {/* 🔘 Action Buttons */}
-              <div>
-                <button>Projects</button>
-                <button>Contact</button>
+          {/* 🐶 Doggo Logo */}
+          <div
+            className={
+              splash
+                ? "animate-doggo-splash top-4 h-16 w-16 left-[calc(50%-2rem)] bg-palette-white rounded-full z-50 absolute flex items-center justify-center select-none drop-shadow-xl transition-[left]"
+                : homeVisible
+                ? "top-4 h-16 w-16 left-[calc(100%-11rem-10%-2rem)] bg-palette-white rounded-full z-50 absolute flex items-center justify-center select-none drop-shadow-xl transition-[left] duration-1000"
+                : "top-4 h-16 w-16 left-[calc(50%-2rem)] bg-palette-white rounded-full z-50 absolute flex items-center justify-center select-none drop-shadow-xl transition-[left]"
+            }
+          >
+            <img
+              src={doggoImage}
+              alt="An image of a Doggo"
+              className={
+                splash
+                  ? "animate-doggo-splash-img transition-[animation] h-[2rem]"
+                  : "transition-[animation] h-[2rem]"
+              }
+            />
+          </div>
+
+          {/* 📫 Main Section */}
+          <section className="">
+            {/* 🖌️ Luciano */}
+            <LucianoSvg
+              colorClass={"text-palette-green"}
+              homeVisible={homeVisible}
+            />
+
+            {/* 🏡 Home Section */}
+            {homeVisible ? (
+              // LucianoSvg top pos in lg: h7, rest h5
+              <div className="left-[3rem] lg:left-[15%] top-[calc(50%-2.5rem)] lg:top-[calc(50%-3.5rem)] absolute animate-opacity-fade-in-0s-delay transition-[top_left] duration-1000">
+                <h2 className="text-[2rem] lg:text-[3rem] font-bold text-palette-yellow drop-shadow-lg">
+                  Full-stack Developer
+                </h2>
+                <p className="text-[1rem] lg:text-[1.5rem] break-words w-[50%]">
+                  Based in London. Fascinated with problem-solving. Always
+                  providing a code with the future in mind.
+                </p>
+                {/* 🔘 Action Buttons */}
+                <div>
+                  <button className="drop-shadow-button-action bg-palette-yellow border-2 border-palette-black rounded-full py-1 px-5">
+                    Projects
+                  </button>
+                  <button>Contact</button>
+                </div>
               </div>
-            </div>
-          ) : null}
+            ) : null}
+          </section>
         </section>
-      </main>
+
+        <section>
+          <h1>HELLO I AM PROJECTS</h1>
+        </section>
+
+        <section>
+          <h1>ABOUT ME</h1>
+        </section>
+
+        <section>
+          <h1>AI ASK - SKILLS</h1>
+        </section>
+
+        <section>
+          <h1>EDUCATION</h1>
+        </section>
+
+        <section>
+          <h1>CONTACT</h1>
+          <h2>FOOTER</h2>
+        </section>
+      </div>
     </>
   );
 }
