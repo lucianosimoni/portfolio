@@ -44,12 +44,24 @@ module.exports = {
         "doggo-splash": "large-to-default 1s ease-in 1s 1 normal backwards",
         "doggo-splash-img":
           "large-to-default-doggo-img 1s ease-in 1s 1 normal backwards",
-        "opacity-fade-in": "fade-in 1s ease-in-out 2s 1 normal backwards",
-        "opacity-fade-in-instant":
+
+        "opacity-fade-in-0s-delay":
           "fade-in 1s ease-in-out 0s 1 normal backwards",
-        "opacity-fade-out": "fade-in 1s ease-in-out 2s 1 reverse backwards",
-        "opacity-fade-out-instant":
+        "opacity-fade-in-1s-delay":
+          "fade-in 1s ease-in-out 1s 1 normal backwards",
+        "opacity-fade-in-2s-delay":
+          "fade-in 1s ease-in-out 2s 1 normal backwards",
+        "opacity-fade-in-3s-delay":
+          "fade-in 1s ease-in-out 3s 1 normal backwards",
+
+        "opacity-fade-out-0s-delay":
           "fade-in 1s ease-in-out 0s 1 reverse backwards",
+        "opacity-fade-out-1s-delay":
+          "fade-in 1s ease-in-out 1s 1 reverse backwards",
+        "opacity-fade-out-2s-delay":
+          "fade-in 1s ease-in-out 2s 1 reverse backwards",
+        "opacity-fade-out-3s-delay":
+          "fade-in 1s ease-in-out 3s 1 reverse backwards",
       },
       colors: {
         "palette-white": "#f7ede2",
@@ -57,6 +69,9 @@ module.exports = {
         "palette-pink": "#f5cac3",
         "palette-yellow": "#f6bd60",
         "palette-black": "#14213d",
+      },
+      dropShadow: {
+        "button-action": "-0.5rem 0.5rem 0 #14213d",
       },
     },
   },
