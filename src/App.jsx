@@ -1,7 +1,8 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import doggoImage from "./assets/doggo.webp";
 import LucianoSvg from "./components/LucianoSvg";
 import MobileSplash from "./components/MobileSplash";
+// import debounce from "lodash.debounce";
 
 export default function App() {
   // clip-path-inset-
@@ -11,11 +12,37 @@ export default function App() {
   const [splash, setSplash] = useState(true);
   const [homeVisible, setHomeVisible] = useState(false);
 
+  const homeSection = useRef();
+  const projectsSection = useRef();
+  const aboutSection = useRef();
+  const aiSection = useRef();
+  const educationSection = useRef();
+  const contactSection = useRef();
+
   useEffect(() => {
     setTimeout(() => {
       setSplash(false);
     }, 3000);
   }, []);
+  // useEffect(() => {
+  //   window.addEventListener("wheel", handleMouseWheel);
+  //   return () => {
+  //     window.removeEventListener("wheel", handleMouseWheel);
+  //   };
+  // }, []);
+  // const handleMouseWheel = debounce((event) => {
+  //   const delta = event.deltaY;
+  //   console.log("Delta Y is: ", delta);
+
+  //   if (delta > 0) {
+  //     console.log("DOWN");
+  //     scrollTo(projectsSection);
+  //   }
+  //   if (delta < 0) {
+  //     console.log("UP");
+  //     scrollTo(homeSection);
+  //   }
+  // }, 100);
 
   const handleMainClick = (event) => {
     if (!splash && !homeVisible) {
@@ -23,14 +50,19 @@ export default function App() {
     }
   };
 
+  const scrollTo = (section) => {
+    section.current.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
-    <div className="overflow-y-auto overscroll-y-contain snap-y snap-mandatory scroll-smooth h-screen w-full scrollbar-hide">
+    <div className="overflow-y-auto overscroll-y-contain snap-y snap-mandatory h-screen w-full scroll-smooth scrollbar-hide">
       {/* 🦫 Mobile Splash */}
       <MobileSplash />
 
-      {/* MAIN SECTION */}
+      {/* 🏡 HOME */}
       <section
         onClick={handleMainClick}
+        ref={homeSection}
         className="relative bg-palette-white bg-center h-screen w-100% bg-doodle-pattern bg-cover snap-center"
       >
         {/* 🏔️ Mountain Clip */}
@@ -54,6 +86,7 @@ export default function App() {
 
         {/* 🔽 Down Arrow */}
         <div
+          onClick={homeVisible ? () => scrollTo(projectsSection) : null}
           className={
             splash
               ? "-rotate-90 animate-opacity-fade-in-2s-delay z-50 absolute left-[calc(50%-2.75rem)] bottom-4 transition-[left] ease-in-out duration-1000"
@@ -121,10 +154,16 @@ export default function App() {
               </p>
               {/* 🔘 Action Buttons */}
               <div className="flex gap-[1rem] p-2 items-end">
-                <button className="ml-2 mb-2 shadow-btn-thick hover:shadow-btn-thick-hover active:shadow-btn-thick-click hover:-translate-x-btn-hover hover:translate-y-btn-hover active:-translate-x-btn-click active:translate-y-btn-click transform-gpu bg-palette-yellow border-2 lg:border-4 border-palette-black text-sm lg:text-xl font-bold rounded-full py-1 lg:py-2 px-8 lg:px-16 transition-[box-shadow_translate] duration-200">
+                <button
+                  onClick={() => scrollTo(projectsSection)}
+                  className="ml-2 mb-2 shadow-btn-thick hover:shadow-btn-thick-hover active:shadow-btn-thick-click hover:-translate-x-btn-hover hover:translate-y-btn-hover active:-translate-x-btn-click active:translate-y-btn-click transform-gpu bg-palette-yellow border-2 lg:border-4 border-palette-black text-sm lg:text-xl font-bold rounded-full py-1 lg:py-2 px-8 lg:px-16 transition-[box-shadow_translate] duration-200"
+                >
                   Projects
                 </button>
-                <button className="text-sm lg:text-xl border-2 h-fit lg:border-4 py-1 lg:py-2 px-5 lg:px-6 border-palette-black hover:bg-palette-yellow font-bold rounded-full transition-[background-color] ">
+                <button
+                  onClick={() => scrollTo(contactSection)}
+                  className="text-sm lg:text-xl border-2 h-fit lg:border-4 py-1 lg:py-2 px-5 lg:px-6 border-palette-black hover:bg-palette-yellow font-bold rounded-full transition-[background-color] "
+                >
                   Contact
                 </button>
               </div>
@@ -133,23 +172,43 @@ export default function App() {
         </section>
       </section>
 
-      <section className="h-screen flex items-center snap-center justify-center bg-palette-white">
+      {/* ⚙️ PROJECTS */}
+      <section
+        ref={projectsSection}
+        className="h-screen flex items-center snap-center justify-center bg-palette-white"
+      >
         <h1>HELLO I AM PROJECTS</h1>
       </section>
 
-      <section className="h-screen flex items-center snap-center justify-center bg-palette-green">
+      {/* 👨🏻 ABOUT ME */}
+      <section
+        ref={aboutSection}
+        className="h-screen flex items-center snap-center justify-center bg-palette-green"
+      >
         <h1>ABOUT ME</h1>
       </section>
 
-      <section className="h-screen flex items-center snap-center justify-center bg-palette-pink">
+      {/* 🧠 AI */}
+      <section
+        ref={aiSection}
+        className="h-screen flex items-center snap-center justify-center bg-palette-pink"
+      >
         <h1>AI ASK - SKILLS</h1>
       </section>
 
-      <section className="h-screen flex items-center snap-center justify-center bg-palette-yellow">
+      {/* 📖 EDUCATION */}
+      <section
+        ref={educationSection}
+        className="h-screen flex items-center snap-center justify-center bg-palette-yellow"
+      >
         <h1>EDUCATION</h1>
       </section>
 
-      <section className="h-screen flex items-center snap-center justify-center bg-palette-black">
+      {/* ☎️ CONTACTS */}
+      <section
+        ref={contactSection}
+        className="h-screen flex items-center snap-center justify-center bg-palette-black"
+      >
         <h1>CONTACT</h1>
         <h2>FOOTER</h2>
       </section>
