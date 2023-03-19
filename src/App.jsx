@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import doggoImage from "./assets/doggo.webp";
 import LucianoSvg from "./components/LucianoSvg";
+import MobileSplash from "./components/MobileSplash";
 
 export default function App() {
   // clip-path-inset-
@@ -23,34 +24,7 @@ export default function App() {
   return (
     <>
       {/* 🦫 Mobile Splash */}
-      <div className="z-[51] visible md:invisible fixed flex flex-col items-center justify-center h-screen w-screen overflow-hidden bg-palette-white text-palette-black">
-        <h1 className="animate-opacity-fade-in-0s-delay text-palette-green text-xl">
-          <b>Hello there!</b>
-        </h1>
-        <span className="animate-opacity-fade-in-1s-delay">
-          I'm <b className="">Luciano Simoni</b>
-        </span>
-        <span className="text-center animate-opacity-fade-in-2s-delay mb-4">
-          My portfolio will be ready for <b>mobile</b> soon.
-          <br /> Check it on a bigger screen.
-        </span>
-        <section className="flex flex-row gap-4 overflow-visible">
-          <a
-            target={"_blank"}
-            href="https://github.com/lucianosimoni"
-            className=" border-palette-black drop-shadow-button-action bg-palette-yellow border-2 rounded-full py-1 px-5 animate-opacity-fade-in-3s-delay"
-          >
-            <b>GitHub</b>
-          </a>
-          <a
-            target={"_blank"}
-            href="https://www.linkedin.com/in/luciano-simoni/"
-            className=" border-palette-black drop-shadow-button-action bg-palette-yellow border-2 rounded-full py-1 px-5 animate-opacity-fade-in-3s-delay"
-          >
-            <b>LinkedIn</b>
-          </a>
-        </section>
-      </div>
+      <MobileSplash />
 
       {/* 📺 Medium and Rest of screens */}
       <main className="bg-palette-white bg-center h-screen w-screen bg-doodle-pattern bg-cover">
