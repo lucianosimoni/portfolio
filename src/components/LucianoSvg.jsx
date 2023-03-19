@@ -11,7 +11,7 @@ export default function LucianoSvg({ colorClass, homeVisible = false }) {
             " left-[2rem] lg:left-[calc(15%-1.5rem)] top-[calc(50%-5rem-2.5rem)] lg:top-[calc(50%-7rem-3.5rem)] h-[5rem] lg:h-[7rem] absolute transition-[top_left] ease-in-out duration-1000 z-40"
           : // CENTERED
             colorClass +
-            " left-[calc(50%-17rem)] top-[calc(50%-4.5rem)] h-[9rem] absolute transition-[top_left] ease-in-out duration-1000 z-40"
+            " animate-opacity-fade-in-1s-delay left-[calc(50%-17rem)] top-[calc(50%-4.5rem)] h-[9rem] absolute transition-[top_left] ease-in-out duration-1000 z-40"
       }
       xmlns="http://www.w3.org/2000/svg"
     >

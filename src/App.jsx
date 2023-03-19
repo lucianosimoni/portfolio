@@ -117,16 +117,16 @@ export default function App() {
                 <h2 className="text-[2rem] lg:text-[3rem] font-bold text-palette-yellow drop-shadow-lg">
                   Full-stack Developer
                 </h2>
-                <p className="text-[1rem] lg:text-[1.5rem] break-words w-[50%] mb-[1rem]">
+                <p className="text-palette-black italic my-4 text-[1rem] lg:text-[1.5rem] break-words w-[50%] mb-[1rem]">
                   Based in London. Fascinated with problem-solving. Always
                   providing a code with the future in mind.
                 </p>
                 {/* 🔘 Action Buttons */}
-                <div className="flex gap-[1rem] p-2">
-                  <button className="shadow-btn-thick hover:shadow-btn-thick-hover active:shadow-btn-thick-click hover:-translate-x-btn-hover hover:translate-y-btn-hover active:-translate-x-btn-click active:translate-y-btn-click transform-gpu bg-palette-yellow border-2 border-palette-black font-bold rounded-full py-1 px-5 transition-[box-shadow_translate] duration-200">
+                <div className="flex gap-[1rem] p-2 items-end">
+                  <button className="ml-2 mb-2 shadow-btn-thick hover:shadow-btn-thick-hover active:shadow-btn-thick-click hover:-translate-x-btn-hover hover:translate-y-btn-hover active:-translate-x-btn-click active:translate-y-btn-click transform-gpu bg-palette-yellow border-2 lg:border-4 border-palette-black text-sm lg:text-xl font-bold rounded-full py-1 lg:py-2 px-8 lg:px-16 transition-[box-shadow_translate] duration-200">
                     Projects
                   </button>
-                  <button className="border-[0.125rem] border-palette-black font-bold rounded-full py-1 px-5">
+                  <button className="text-sm lg:text-xl border-2 h-fit lg:border-4 py-1 lg:py-2 px-5 lg:px-6 border-palette-black hover:bg-palette-yellow font-bold rounded-full transition-[background-color] ">
                     Contact
                   </button>
                 </div>
