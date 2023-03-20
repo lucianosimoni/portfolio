@@ -2,6 +2,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import doggoImage from "./assets/doggo.webp";
 import LucianoSvg from "./components/LucianoSvg";
 import MobileSplash from "./components/MobileSplash";
+import Navigation from "./components/Navigation";
 // import debounce from "lodash.debounce";
 
 export default function App() {
@@ -51,13 +52,34 @@ export default function App() {
   };
 
   const scrollTo = (section) => {
+    console.log("Scroll to");
     section.current.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
-    <div className="overflow-y-auto overscroll-y-contain snap-y snap-mandatory h-screen w-full scroll-smooth scrollbar-hide">
+    <div
+      className={
+        homeVisible
+          ? "overflow-y-auto overscroll-y-contain snap-y snap-mandatory h-screen w-full scroll-smooth scrollbar-hide"
+          : "overflow-y-hidden overscroll-y-contain snap-y snap-mandatory h-screen w-full scroll-smooth scrollbar-hide"
+      }
+    >
       {/* 🦫 Mobile Splash */}
       <MobileSplash />
+
+      {/* 📫 NAVIGATION */}
+      <Navigation
+        homeVisible={homeVisible}
+        scrollTo={scrollTo}
+        references={{
+          homeSection,
+          projectsSection,
+          aboutSection,
+          aiSection,
+          educationSection,
+          contactSection,
+        }}
+      />
 
       {/* 🏡 HOME */}
       <section
