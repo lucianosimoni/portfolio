@@ -3,6 +3,7 @@ import doggoImage from "./assets/doggo.webp";
 import LucianoSvg from "./components/LucianoSvg";
 import MobileSplash from "./components/MobileSplash";
 import Navigation from "./components/Navigation";
+import Projects from "./components/Projects";
 // import debounce from "lodash.debounce";
 
 export default function App() {
@@ -194,12 +195,7 @@ export default function App() {
       </section>
 
       {/* ⚙️ PROJECTS */}
-      <section
-        ref={projectsSection}
-        className="h-screen flex items-center snap-center justify-center bg-palette-white"
-      >
-        <h1>HELLO I AM PROJECTS</h1>
-      </section>
+      <Projects reference={projectsSection} />
 
       {/* 👨🏻 ABOUT ME */}
       <section

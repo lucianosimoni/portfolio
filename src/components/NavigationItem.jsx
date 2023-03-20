@@ -1,11 +1,13 @@
-import homeSvg from "../assets/home.svg";
-import projectsSvg from "../assets/projects.svg";
-import aboutmeSvg from "../assets/aboutme.svg";
-import askmyaiSvg from "../assets/askmyai.svg";
-import educationSvg from "../assets/education.svg";
-import contactsSvg from "../assets/contacts.svg";
+import homeSvg from "./assets/home.svg";
+import projectsSvg from "./assets/projects.svg";
+import aboutmeSvg from "./assets/aboutme.svg";
+import askmyaiSvg from "./assets/askmyai.svg";
+import educationSvg from "./assets/education.svg";
+import contactsSvg from "./assets/contacts.svg";
 
 export default function NavigationItem({ onClick, name }) {
+  // FIXME: Icons are just black, not nice.
+  // TODO: Add the current section and update navigation with colored yellow dot.
   return (
     <li
       onClick={onClick}
