@@ -1,11 +1,10 @@
 import NavigationItem from "./NavigationItem";
-
 export default function Navigation({ homeVisible, scrollTo, references }) {
   return (
     <nav
       className={
         homeVisible
-          ? "animate-opacity-fade-in-0s-delay absolute h-full flex right-0 z-[51] bg-palette-yellow overflow-hidden"
+          ? "absolute h-full flex items-center right-4 z-[51] group/nav animate-opacity-fade-in-0s-delay"
           : "invisible absolute right-0 z-[51]"
       }
     >

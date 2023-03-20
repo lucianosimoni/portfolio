@@ -52,7 +52,6 @@ export default function App() {
   };
 
   const scrollTo = (section) => {
-    console.log("Scroll to");
     section.current.scrollIntoView({ behavior: "smooth" });
   };
 
