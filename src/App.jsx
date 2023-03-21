@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import doggoImage from "./assets/doggo.webp";
-import LucianoSvg from "./components/LucianoSvg";
+import LucianoSvg from "./components/svg/LucianoSvg";
 import MobileSplash from "./components/MobileSplash";
 import Navigation from "./components/Navigation";
 import Projects from "./components/Projects";
@@ -178,13 +178,13 @@ export default function App() {
               <div className="flex gap-[1rem] p-2 items-end">
                 <button
                   onClick={() => scrollTo(projectsSection)}
-                  className="ml-2 mb-2 shadow-btn-thick hover:shadow-btn-thick-hover active:shadow-btn-thick-click hover:-translate-x-btn-hover hover:translate-y-btn-hover active:-translate-x-btn-click active:translate-y-btn-click transform-gpu bg-palette-yellow border-2 lg:border-4 border-palette-black text-sm lg:text-xl font-bold rounded-full py-1 lg:py-2 px-8 lg:px-16 transition-[box-shadow_translate] duration-200"
+                  className="text-palette-black ml-2 mb-2 shadow-btn-thick hover:shadow-btn-thick-hover active:shadow-btn-thick-click hover:-translate-x-btn-hover hover:translate-y-btn-hover active:-translate-x-btn-click active:translate-y-btn-click transform-gpu bg-palette-yellow border-2 lg:border-4 border-palette-black text-sm lg:text-xl font-bold rounded-full py-1 lg:py-2 px-8 lg:px-16 transition-[box-shadow_translate] duration-200"
                 >
                   Projects
                 </button>
                 <button
                   onClick={() => scrollTo(contactSection)}
-                  className="text-sm lg:text-xl border-2 h-fit lg:border-4 py-1 lg:py-2 px-5 lg:px-6 border-palette-black hover:bg-palette-yellow font-bold rounded-full transition-[background-color] "
+                  className="text-palette-black text-sm lg:text-xl border-2 h-fit lg:border-4 py-1 lg:py-2 px-5 lg:px-6 border-palette-black hover:bg-palette-yellow font-bold rounded-full transition-[background-color] "
                 >
                   Contact
                 </button>
