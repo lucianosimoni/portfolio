@@ -1,6 +1,6 @@
 import HomeSvg from "./svg/HomeSvg.jsx";
 import ProjectsSvg from "./svg/ProjectsSvg.jsx";
-import AboutMeSvg from "./svg/AboutmeSvg.jsx";
+import AboutMeSvg from "./svg/AboutMeSvg.jsx";
 import AskMyAiSvg from "./svg/AskMyAiSvg.jsx";
 import EducationSvg from "./svg/EducationSvg.jsx";
 import ContactsSvg from "./svg/ContactsSvg.jsx";
