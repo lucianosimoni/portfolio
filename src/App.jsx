@@ -224,10 +224,14 @@ export default function App() {
       {/* ☎️ CONTACTS */}
       <section
         ref={contactSection}
-        className="h-screen flex items-center snap-center justify-center bg-palette-black"
+        className="h-screen flex flex-col items-center snap-center justify-center bg-palette-white"
       >
-        <h1>CONTACT</h1>
+        <h1>EMAIL: lucianoSimoniPersonal@gmail.com</h1>
         <h2>FOOTER</h2>
+        <span>
+          Sorry, come back later because it still in progress - I hope that you
+          liked what you saw
+        </span>
       </section>
     </div>
   );
