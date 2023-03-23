@@ -4,13 +4,20 @@ export default function ProjectItem({
   stack = "React.js ▪️ JavaScript ▪️ CSS ▪️ PostgreSQL",
   previewLink,
   githubLink,
-  imgPath = "https://gratisography.com/wp-content/uploads/2023/02/gratisography-colorful-kittenfree-stock-photo-800x525.jpg",
+  imgName,
 }) {
+  const images = {
+    "ai-interviewer": "bg-ai-interviewer ",
+    "address-book": "bg-address-book ",
+    pothole: "bg-pothole ",
+    trextter: "bg-trextter ",
+  };
+
   return (
     <div className="bg-palette-white w-[335px] flex flex-col h-auto lg:w-[435px] p-2 rounded-[1.4rem] lg:rounded-[2.125rem] border-2 lg:border-4 border-palette-black shadow-btn-thick">
       {/* 🖼️ IMG */}
       <div
-        className={`bg-[url(${imgPath})] border-1 bg-cover bg-center h-[200px] w-full cursor-pointer hover:scale-[101%] rounded-[23px] border-palette-black transition-all duration-500`}
+        className={`${images[imgName]} border-1 bg-cover bg-center h-[200px] w-full cursor-pointer hover:scale-[101%] rounded-[23px] border-palette-black transition-all duration-500`}
       ></div>
 
       {/* 📖 TEXTS */}

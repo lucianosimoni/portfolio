@@ -46,7 +46,7 @@ export default function Projects({ reference }) {
           }
           previewLink={"https://ai-interviewer-gh3q.onrender.com"}
           githubLink={"https://github.com/lucianosimoni/ai-interviewer-client"}
-          imgPath={"/src/assets/ai-interviewer.webp"}
+          imgName="ai-interviewer"
         />
         <ProjectItem
           title={"Potholes"}
@@ -60,7 +60,7 @@ export default function Projects({ reference }) {
             "https://www.figma.com/proto/MJ7mp7MWYA54koczKWnxQe/PotHole-Report---Luciano-Simoni?page-id=0%3A1&node-id=3-2"
           }
           githubLink={"https://github.com/lucianosimoni/potholes"}
-          imgPath={"/src/assets/pothole.webp"}
+          imgName="pothole"
         />
         <ProjectItem
           title={"Trextter"}
@@ -72,7 +72,7 @@ export default function Projects({ reference }) {
           }
           previewLink={"https://lucianosimoni.github.io/html-twitter-trextter/"}
           githubLink={"https://github.com/lucianosimoni/html-twitter-trextter"}
-          imgPath={"/src/assets/trextter.webp"}
+          imgName="trextter"
         />
         <ProjectItem
           title={"Address Book"}
@@ -84,7 +84,7 @@ export default function Projects({ reference }) {
           }
           previewLink={"https://lucianosimoni.github.io/react-address-book/"}
           githubLink={"https://github.com/lucianosimoni/react-address-book"}
-          imgPath={"/src/assets/address-book.webp"}
+          imgName="address-book"
         />
       </div>
     </section>
