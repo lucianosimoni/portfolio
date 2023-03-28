@@ -4,7 +4,7 @@ import LucianoSvg from "./components/svg/LucianoSvg";
 import MobileSplash from "./components/MobileSplash";
 import Navigation from "./components/Navigation";
 import Projects from "./components/Projects";
-// import debounce from "lodash.debounce";
+import AboutMe from "./components/AboutMe";
 
 export default function App() {
   // clip-path-inset-
@@ -195,15 +195,14 @@ export default function App() {
       </section>
 
       {/* ⚙️ PROJECTS */}
-      <Projects reference={projectsSection} />
+      <Projects
+        reference={projectsSection}
+        scrollTo={scrollTo}
+        nextSectionRef={aboutSection}
+      />
 
       {/* 👨🏻 ABOUT ME */}
-      <section
-        ref={aboutSection}
-        className="h-screen flex items-center snap-center justify-center bg-palette-green"
-      >
-        <h1>ABOUT ME</h1>
-      </section>
+      <AboutMe reference={aboutSection} />
 
       {/* 🧠 AI */}
       <section

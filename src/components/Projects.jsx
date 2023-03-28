@@ -1,7 +1,7 @@
 import ProjectItem from "./ProjectItem";
 import { useState } from "react";
 
-export default function Projects({ reference }) {
+export default function Projects({ reference, scrollTo, nextSectionRef }) {
   const [isAtTop, setIsAtTop] = useState(true);
   const [isAtBottom, setIsAtBottom] = useState(false);
 
@@ -14,11 +14,11 @@ export default function Projects({ reference }) {
   };
 
   const topBar =
-    "h-screen p-8 gap-8 flex flex-col bg-doodle-pattern bg-cover border-t-0 border-b-[1rem] border-palette-black transition-[border] snap-center scrollbar-hide overflow-x-hidden overflow-y-auto bg-palette-white";
+    "h-screen p-8 pb-0 gap-8 flex flex-col bg-doodle-pattern bg-cover border-t-0 border-b-[1rem] border-palette-black transition-[border] snap-center scrollbar-hide overflow-x-hidden overflow-y-auto bg-palette-white";
   const bottomBar =
-    "h-screen p-8 gap-8 flex flex-col bg-doodle-pattern bg-cover border-t-[1rem] border-b-0 border-palette-black transition-[border] snap-center scrollbar-hide overflow-x-hidden overflow-y-auto bg-palette-white";
+    "h-screen p-8 pb-0 gap-8 flex flex-col bg-doodle-pattern bg-cover border-t-[1rem] border-b-0 border-palette-black transition-[border] snap-center scrollbar-hide overflow-x-hidden overflow-y-auto bg-palette-white";
   const bothBar =
-    "h-screen p-8 gap-8 flex flex-col bg-doodle-pattern bg-cover border-y-[1rem] border-palette-black transition-[border] snap-center scrollbar-hide overflow-x-hidden overflow-y-auto bg-palette-white";
+    "h-screen p-8 pb-0 gap-8 flex flex-col bg-doodle-pattern bg-cover border-y-[1rem] border-palette-black transition-[border] snap-center scrollbar-hide overflow-x-hidden overflow-y-auto bg-palette-white";
 
   return (
     <section
@@ -86,6 +86,30 @@ export default function Projects({ reference }) {
           githubLink={"https://github.com/lucianosimoni/react-address-book"}
           imgName="address-book"
         />
+      </div>
+
+      {/* ⬇️ BOTTOM TRANSITION */}
+      <div className="flex justify-center">
+        <div
+          onClick={() => scrollTo(nextSectionRef)}
+          className="hover:cursor-pointer group-[bottom-transition]: h-[150px] w-[300px] flex items-center justify-center rounded-t-full bg-palette-black"
+        >
+          <svg
+            width="88"
+            height="48"
+            fill="none"
+            className="mt-8 group-hover:scale-110  cursor-pointer drop-shadow-2xl text-palette-white flex justify-center transition-[transform]"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10 10 L44 40 L78 10"
+              stroke="currentColor"
+              strokeWidth="4"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </div>
       </div>
     </section>
   );

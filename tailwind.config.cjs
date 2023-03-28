@@ -9,6 +9,7 @@ module.exports = {
       "address-book": "url('/src/assets/address-book.webp')",
       pothole: "url('/src/assets/pothole.webp')",
       trextter: "url('/src/assets/trextter.webp')",
+      "profile-picture": "url('/src/assets/lucianosimoni.webp')",
     },
     extend: {
       keyframes: {
