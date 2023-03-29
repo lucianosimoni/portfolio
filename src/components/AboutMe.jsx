@@ -54,8 +54,8 @@ export default function AboutMe({ reference, scrollTo, homeSectionRef }) {
         <div
           className={
             showingLess
-              ? "hidden bg-slate-100 flex-col gap-4 transition-all duration-100"
-              : "animate-opacity-fade-in-0s-delay flex flex-col gap-4 transition-all duration-100"
+              ? "hidden bg-slate-100 flex-col gap-4 transition-all duration-1000"
+              : "animate-opacity-fade-in-0s-delay flex flex-col gap-4 transition-all duration-1000"
           }
         >
           <p>

@@ -211,30 +211,67 @@ export default function App() {
       {/* 🧠 AI */}
       <section
         ref={aiSection}
-        className="h-screen flex items-center snap-center justify-center bg-palette-pink"
+        className="h-screen flex flex-col items-center snap-center justify-center bg-palette-white"
       >
-        <h1>AI ASK - SKILLS</h1>
+        <h1 className="text-2xl">AI Ask | Skills</h1>
+        <span>Soon to be added...</span>
+        <span className="animate-bounce">Sorry</span>
       </section>
 
       {/* 📖 EDUCATION */}
       <section
         ref={educationSection}
-        className="h-screen flex items-center snap-center justify-center bg-palette-yellow"
+        className="h-screen flex flex-col items-center snap-center justify-center bg-palette-white"
       >
-        <h1>EDUCATION</h1>
+        <h1 className="text-2xl">Education</h1>
+        <span>Soon to be added...</span>
+        <span className="animate-bounce">Sorry</span>
       </section>
 
       {/* ☎️ CONTACTS */}
       <section
         ref={contactSection}
-        className="h-screen flex flex-col items-center snap-center justify-center bg-palette-white"
+        className="h-screen flex flex-col gap-3 items-center snap-center justify-center bg-cover bg-mountain-dark-nobg bg-palette-white"
       >
-        <h1>EMAIL: lucianoSimoniPersonal@gmail.com</h1>
-        <h2>FOOTER</h2>
-        <span>
-          Sorry, come back later because it still in progress - I hope that you
-          liked what you saw
-        </span>
+        <div className="flex flex-col items-center bg-[#F7EDE290] rounded-[20px] p-4">
+          <h1 className="text-2xl">Let's get in touch</h1>
+          {/* EMAIL */}
+          <div className="flex flex-row items-center gap-4">
+            <span>lucianoSimoniPersonal@gmail.com</span>
+            <a
+              href="mailto:lucianosimonipersonal@gmail.com"
+              target="_blank"
+              className="cursor-pointer flex items-center justify-center h-12 w-12 p-2 bg-palette-yellow rounded-full drop-shadow-lg text-palette-black font-extrabold"
+            >
+              {">"}
+            </a>
+          </div>
+          {/* LINKEDIN */}
+          <div className="flex flex-row items-center gap-4">
+            <span>LinkedIn</span>
+            <a
+              href="https://www.linkedin.com/in/luciano-simoni/"
+              target="_blank"
+              className="cursor-pointer flex items-center justify-center h-12 w-12 p-2 bg-palette-yellow rounded-full drop-shadow-lg text-palette-black font-extrabold"
+            >
+              {">"}
+            </a>
+          </div>
+          {/* GITHUB */}
+          <div className="flex flex-row items-center gap-4">
+            <span>GitHub</span>
+            <a
+              href="https://github.com/lucianosimoni"
+              target="_blank"
+              className="cursor-pointer flex items-center justify-center h-12 w-12 p-2 bg-palette-yellow rounded-full drop-shadow-lg text-palette-black font-extrabold"
+            >
+              {">"}
+            </a>
+          </div>
+          <span className="animate-bounce">
+            <i>Temporary contacts section</i>
+          </span>
+        </div>
       </section>
     </div>
   );

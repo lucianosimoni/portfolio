@@ -4,6 +4,7 @@ module.exports = {
   theme: {
     backgroundImage: {
       "mountain-dark": "url('/src/assets/mountain-dark.webp')",
+      "mountain-dark-nobg": "url('/src/assets/mountain-dark-nobg.webp')",
       "ai-interviewer": "url('/src/assets/ai-interviewer.webp')",
       "address-book": "url('/src/assets/address-book.webp')",
       pothole: "url('/src/assets/pothole.webp')",
