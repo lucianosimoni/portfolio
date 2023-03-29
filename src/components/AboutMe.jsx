@@ -1,14 +1,24 @@
+import { useState } from "react";
 import BrazilSvg from "./svg/BrazilSvg";
 import doggoImage from "/src/assets/doggo.webp";
 
-export default function AboutMe({ reference }) {
+export default function AboutMe({ reference, scrollTo, homeSectionRef }) {
+  const [showingLess, setShowingLess] = useState(true);
+
+  const handleShowButton = (event) => {
+    setShowingLess(!showingLess);
+  };
+
   return (
     <section
       ref={reference}
       className="md:p-8 lg:p-24 gap-24 grid grid-cols-2 items-center h-screen w-full relative snap-center scrollbar-hide overflow-hidden bg-palette-white"
     >
       {/* 🚜 Logo */}
-      <div className="flex items-center justify-center absolute top-0 left-[calc(50%-150px)] w-[300px] h-[80px] rounded-b-[2rem] bg-palette-black drop-shadow-xl">
+      <div
+        onClick={() => scrollTo(homeSectionRef)}
+        className="flex items-center justify-center cursor-pointer absolute top-0 left-[calc(50%-150px)] w-[300px] h-[80px] rounded-b-[2rem] bg-palette-black drop-shadow-xl"
+      >
         <div className="flex items-center select-none drop-shadow-xl bg-palette-white rounded-full h-16 w-16">
           <img src={doggoImage} alt="An image of a Doggo" className="h-10" />
         </div>
@@ -16,25 +26,38 @@ export default function AboutMe({ reference }) {
 
       {/* 📄 TEXT SECTION */}
       <div className="flex flex-col md:text-xs lg:text-base gap-4 first:gap-8">
-        <h2 className="text-palette-yellow drop-shadow-md md:text-2xl lg:text-5xl">
-          An inspired dev
+        <h2 className="text-palette-yellow drop-shadow-md font-bold md:text-2xl lg:text-5xl">
+          Hello there 🙂
         </h2>
+
         {/* 🗞️ CONCISE VERSION */}
-        <div className="flex flex-col gap-4">
-          <p className="hidden">
+        <div
+          className={
+            showingLess
+              ? "animate-opacity-fade-in-0s-delay flex flex-col gap-4 transition-all duration-100"
+              : "hidden flex-col gap-4 transition-all duration-150"
+          }
+        >
+          <p>
             I'm a recent bootcamp graduate with a lifelong passion for coding. I
             began experimenting with programming at a young age and have since
             honed my skills in building applications of all sizes. Whether
             working independently or as part of a team.
           </p>
-          <p className="hidden">
+          <p>
             I thrive on the challenge of developing solutions to complex
             problems.
           </p>
         </div>
 
         {/* 📰 NORMAL VERSION */}
-        <div className="flex flex-col gap-4">
+        <div
+          className={
+            showingLess
+              ? "hidden bg-slate-100 flex-col gap-4 transition-all duration-100"
+              : "animate-opacity-fade-in-0s-delay flex flex-col gap-4 transition-all duration-100"
+          }
+        >
           <p>
             I'm a recent graduate from a bootcamp where I learned the necessary
             skills to become a full-stack software developer. My interest in
@@ -58,6 +81,17 @@ export default function AboutMe({ reference }) {
             developer.
           </p>
         </div>
+
+        <button
+          onClick={handleShowButton}
+          className={
+            showingLess
+              ? "shadow-btn-thick hover:shadow-btn-thick-hover active:shadow-btn-thick-click hover:-translate-x-btn-hover hover:translate-y-btn-hover active:-translate-x-btn-click active:translate-y-btn-click text-palette-black text-center ml-2 mb-2  transform-gpu cursor-pointer bg-palette-yellow border-2 lg:border-4 border-palette-black text-sm lg:text-xl font-bold rounded-full py-1 lg:py-2 px-8 lg:px-16 transition-[box-shadow_translate] duration-200"
+              : "shadow-btn-thick-hover -translate-x-btn-hover translate-y-btn-hover active:shadow-btn-thick-click active:-translate-x-btn-click active:translate-y-btn-click text-palette-black text-center ml-2 mb-2  transform-gpu cursor-pointer bg-palette-yellow border-2 lg:border-4 border-palette-black text-sm lg:text-xl font-bold rounded-full py-1 lg:py-2 px-8 lg:px-16 transition-[box-shadow_translate] duration-200"
+          }
+        >
+          {showingLess ? "Show more" : "Show less"}
+        </button>
       </div>
 
       {/* Brazil Section */}

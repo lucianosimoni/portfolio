@@ -202,7 +202,11 @@ export default function App() {
       />
 
       {/* 👨🏻 ABOUT ME */}
-      <AboutMe reference={aboutSection} />
+      <AboutMe
+        reference={aboutSection}
+        scrollTo={scrollTo}
+        homeSectionRef={homeSection}
+      />
 
       {/* 🧠 AI */}
       <section
