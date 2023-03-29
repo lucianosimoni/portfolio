@@ -85,16 +85,16 @@ export default function App() {
       <section
         onClick={handleMainClick}
         ref={homeSection}
-        className="relative bg-palette-white bg-center h-screen w-100% bg-doodle-pattern bg-cover snap-center"
+        className="relative bg-palette-white h-screen w-100% snap-center"
       >
         {/* 🏔️ Mountain Clip */}
         <div
           className={
             splash
-              ? "clip-path-inset-[0_calc(50%-8rem)_0_calc(50%-8rem)] animate-openning-clip z-50 contrast-125 absolute bg-mountain-dark bg-cover h-screen w-full transition-[clip-path] ease-in-out duration-1000"
+              ? "clip-path-inset-[0_calc(50%-8rem)_0_calc(50%-8rem)] bg-cover animate-openning-clip z-50 contrast-125 absolute bg-mountain-dark h-screen w-full transition-[clip-path] ease-in-out duration-1000"
               : homeVisible
-              ? "clip-path-inset-[0_11rem_0_calc(100%-11rem-20%)] z-50 contrast-125 absolute bg-mountain-dark bg-cover h-screen w-full transition-[clip-path] ease-in-out duration-1000"
-              : "clip-path-inset-[0_calc(50%-8rem)_0_calc(50%-8rem)] z-50 contrast-125 absolute bg-mountain-dark bg-cover h-screen w-full transition-[clip-path] ease-in-out duration-1000"
+              ? "clip-path-inset-[0_11rem_0_calc(100%-11rem-20%)] bg-cover z-50 contrast-125 absolute bg-mountain-dark h-screen w-full transition-[clip-path] ease-in-out duration-1000"
+              : "clip-path-inset-[0_calc(50%-8rem)_0_calc(50%-8rem)] bg-cover z-50 contrast-125 absolute bg-mountain-dark h-screen w-full transition-[clip-path] ease-in-out duration-1000"
           }
         >
           <section className="flex h-full justify-center items-center">

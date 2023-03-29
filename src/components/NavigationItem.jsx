@@ -1,9 +1,9 @@
-import HomeSvg from "./svg/HomeSvg.jsx";
-import ProjectsSvg from "./svg/ProjectsSvg.jsx";
-import AboutMeSvg from "./svg/AboutMeSvg.jsx";
-import AskMyAiSvg from "./svg/AskMyAiSvg.jsx";
-import EducationSvg from "./svg/EducationSvg.jsx";
-import ContactsSvg from "./svg/ContactsSvg.jsx";
+import HomeSvg from "./svg/navigation/HomeSvg.jsx";
+import ProjectsSvg from "./svg/navigation/ProjectsSvg.jsx";
+import AboutMeSvg from "./svg/navigation/AboutMeSvg.jsx";
+import AskMyAiSvg from "./svg/navigation/AskMyAiSvg.jsx";
+import EducationSvg from "./svg/navigation/EducationSvg.jsx";
+import ContactsSvg from "./svg/navigation/ContactsSvg.jsx";
 
 export default function NavigationItem({ onClick, name }) {
   // FIXME: Icons are just black, not nice.
