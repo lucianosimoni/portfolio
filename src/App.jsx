@@ -8,10 +8,6 @@ import AboutMe from "./components/AboutMe";
 import Contacts from "./components/Contacts";
 
 export default function App() {
-  // clip-path-inset-
-  // middle [0_calc(50%-8rem)_0_calc(50%-8rem)]
-  // right [0_11rem_0_calc(100%-11rem-16rem)]
-  // closed [0_50%_0_50%]
   const [splash, setSplash] = useState(true);
   const [homeVisible, setHomeVisible] = useState(false);
 
@@ -22,30 +18,54 @@ export default function App() {
   const educationSection = useRef();
   const contactSection = useRef();
 
+  const [selectedSection, setSelectedSection] = useState(homeSection);
+
   useEffect(() => {
     setTimeout(() => {
       setSplash(false);
     }, 3000);
-  }, []);
-  // useEffect(() => {
-  //   window.addEventListener("wheel", handleMouseWheel);
-  //   return () => {
-  //     window.removeEventListener("wheel", handleMouseWheel);
-  //   };
-  // }, []);
-  // const handleMouseWheel = debounce((event) => {
-  //   const delta = event.deltaY;
-  //   console.log("Delta Y is: ", delta);
 
-  //   if (delta > 0) {
-  //     console.log("DOWN");
-  //     scrollTo(projectsSection);
-  //   }
-  //   if (delta < 0) {
-  //     console.log("UP");
-  //     scrollTo(homeSection);
-  //   }
-  // }, 100);
+    const container = document.getElementById("main-container");
+    const sections = [
+      homeSection,
+      projectsSection,
+      aboutSection,
+      aiSection,
+      educationSection,
+      contactSection,
+    ];
+
+    // Deboucing variables
+    let timeoutId;
+    const delay = 200;
+
+    const handleScroll = () => {
+      console.log("Handling scroll");
+      const scrollPos = container.scrollTop;
+
+      for (let i = 0; i < sections.length; i++) {
+        const sectionPos = sections[i].current.offsetTop;
+        if (
+          scrollPos >= sectionPos &&
+          scrollPos < sectionPos + sections[i].current.offsetHeight
+        ) {
+          setSelectedSection(sections[i]);
+          break;
+        }
+      }
+    };
+
+    const debouncedHandleScroll = () => {
+      clearTimeout(timeoutId); // Cancel any pending timeout
+
+      timeoutId = setTimeout(() => {
+        handleScroll();
+      }, delay);
+    };
+
+    container.addEventListener("scroll", debouncedHandleScroll);
+    return () => container.removeEventListener("scroll", debouncedHandleScroll);
+  }, []);
 
   const handleMainClick = (event) => {
     if (!splash && !homeVisible) {
@@ -54,15 +74,17 @@ export default function App() {
   };
 
   const scrollTo = (section) => {
+    setSelectedSection(section);
     section.current.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
     <div
+      id="main-container"
       className={
         homeVisible
-          ? "overflow-y-auto overscroll-y-contain snap-y snap-mandatory h-screen w-full scroll-smooth scrollbar-hide"
-          : "overflow-y-hidden overscroll-y-contain snap-y snap-mandatory h-screen w-full scroll-smooth scrollbar-hide"
+          ? "overflow-y-auto overscroll-y-contain snap-y snap-mandatory h-screen w-full scroll-smooth scrollbar-hide-"
+          : "overflow-y-hidden overscroll-y-contain snap-y snap-mandatory h-screen w-full scroll-smooth scrollbar-hide-"
       }
     >
       {/* 🦫 Mobile Splash */}
@@ -80,6 +102,7 @@ export default function App() {
           educationSection,
           contactSection,
         }}
+        selectedSection={selectedSection}
       />
 
       {/* 🏡 HOME */}

@@ -1,5 +1,12 @@
+import { useEffect } from "react";
 import NavigationItem from "./NavigationItem";
-export default function Navigation({ homeVisible, scrollTo, references }) {
+
+export default function Navigation({
+  homeVisible,
+  scrollTo,
+  references,
+  selectedSection,
+}) {
   return (
     <nav
       className={
@@ -12,26 +19,32 @@ export default function Navigation({ homeVisible, scrollTo, references }) {
         <NavigationItem
           onClick={() => scrollTo(references.homeSection)}
           name={"Home"}
+          selected={selectedSection === references.homeSection}
         />
         <NavigationItem
           onClick={() => scrollTo(references.projectsSection)}
           name={"Projects"}
+          selected={selectedSection === references.projectsSection}
         />
         <NavigationItem
           onClick={() => scrollTo(references.aboutSection)}
           name={"About me"}
+          selected={selectedSection === references.aboutSection}
         />
         <NavigationItem
           onClick={() => scrollTo(references.aiSection)}
           name={"Ask my AI"}
+          selected={selectedSection === references.aiSection}
         />
         <NavigationItem
           onClick={() => scrollTo(references.educationSection)}
           name={"Education"}
+          selected={selectedSection === references.educationSection}
         />
         <NavigationItem
           onClick={() => scrollTo(references.contactSection)}
           name={"Contacts"}
+          selected={selectedSection === references.contactSection}
         />
       </ul>
     </nav>
