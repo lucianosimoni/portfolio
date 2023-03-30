@@ -5,6 +5,7 @@ import MobileSplash from "./components/MobileSplash";
 import Navigation from "./components/Navigation";
 import Projects from "./components/Projects";
 import AboutMe from "./components/AboutMe";
+import Contacts from "./components/Contacts";
 
 export default function App() {
   // clip-path-inset-
@@ -229,50 +230,7 @@ export default function App() {
       </section>
 
       {/* ☎️ CONTACTS */}
-      <section
-        ref={contactSection}
-        className="h-screen flex flex-col gap-3 items-center snap-center justify-center bg-cover bg-mountain-dark-nobg bg-palette-white"
-      >
-        <div className="flex flex-col items-center bg-[#F7EDE290] rounded-[20px] p-4">
-          <h1 className="text-2xl">Let's get in touch</h1>
-          {/* EMAIL */}
-          <div className="flex flex-row items-center gap-4">
-            <span>lucianoSimoniPersonal@gmail.com</span>
-            <a
-              href="mailto:lucianosimonipersonal@gmail.com"
-              target="_blank"
-              className="cursor-pointer flex items-center justify-center h-12 w-12 p-2 bg-palette-yellow rounded-full drop-shadow-lg text-palette-black font-extrabold"
-            >
-              {">"}
-            </a>
-          </div>
-          {/* LINKEDIN */}
-          <div className="flex flex-row items-center gap-4">
-            <span>LinkedIn</span>
-            <a
-              href="https://www.linkedin.com/in/luciano-simoni/"
-              target="_blank"
-              className="cursor-pointer flex items-center justify-center h-12 w-12 p-2 bg-palette-yellow rounded-full drop-shadow-lg text-palette-black font-extrabold"
-            >
-              {">"}
-            </a>
-          </div>
-          {/* GITHUB */}
-          <div className="flex flex-row items-center gap-4">
-            <span>GitHub</span>
-            <a
-              href="https://github.com/lucianosimoni"
-              target="_blank"
-              className="cursor-pointer flex items-center justify-center h-12 w-12 p-2 bg-palette-yellow rounded-full drop-shadow-lg text-palette-black font-extrabold"
-            >
-              {">"}
-            </a>
-          </div>
-          <span className="animate-bounce">
-            <i>Temporary contacts section</i>
-          </span>
-        </div>
-      </section>
+      <Contacts reference={contactSection} />
     </div>
   );
 }

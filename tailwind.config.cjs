@@ -7,6 +7,7 @@ module.exports = {
       "mountain-dark-nobg": "url('/src/assets/mountain-dark-nobg.webp')",
       "ai-interviewer": "url('/src/assets/ai-interviewer.webp')",
       "address-book": "url('/src/assets/address-book.webp')",
+      "doodle-pattern": "url('/src/assets/doodle-pattern.webp')",
       pothole: "url('/src/assets/pothole.webp')",
       trextter: "url('/src/assets/trextter.webp')",
     },
