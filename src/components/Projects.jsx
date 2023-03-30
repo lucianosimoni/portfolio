@@ -14,11 +14,11 @@ export default function Projects({ reference, scrollTo, nextSectionRef }) {
   };
 
   const topBar =
-    "h-screen p-8 pb-0 gap-8 flex flex-col      border-t-0 border-b-[1rem] border-palette-black transition-[border] snap-center scrollbar-hide overflow-x-hidden overflow-y-auto bg-palette-white";
+    "h-screen p-8 pb-0 gap-8 flex flex-col border-t-0 border-b-[1rem] border-palette-black transition-[border] snap-center scrollbar-hide overflow-x-hidden overflow-y-auto bg-palette-white";
   const bottomBar =
-    "h-screen p-8 pb-0 gap-8 flex flex-col      border-t-[1rem] border-b-0 border-palette-black transition-[border] snap-center scrollbar-hide overflow-x-hidden overflow-y-auto bg-palette-white";
+    "h-screen p-8 pb-0 gap-8 flex flex-col border-t-[1rem] border-b-0 border-palette-black transition-[border] snap-center scrollbar-hide overflow-x-hidden overflow-y-auto bg-palette-white";
   const bothBar =
-    "h-screen p-8 pb-0 gap-8 flex flex-col      border-y-[1rem] border-palette-black transition-[border] snap-center scrollbar-hide overflow-x-hidden overflow-y-auto bg-palette-white";
+    "h-screen p-8 pb-0 gap-8 flex flex-col border-y-[1rem] border-palette-black transition-[border] snap-center scrollbar-hide overflow-x-hidden overflow-y-auto bg-palette-white";
 
   return (
     <section
@@ -89,7 +89,7 @@ export default function Projects({ reference, scrollTo, nextSectionRef }) {
       </div>
 
       {/* ⬇️ BOTTOM TRANSITION */}
-      <div className="flex justify-center">
+      <div className="flex-auto flex justify-center items-end">
         <div
           onClick={() => scrollTo(nextSectionRef)}
           className="hover:cursor-pointer group-[bottom-transition]: h-[150px] w-[300px] flex items-center justify-center rounded-t-full drop-shadow-xl bg-palette-black"
