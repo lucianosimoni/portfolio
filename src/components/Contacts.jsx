@@ -10,7 +10,6 @@ export default function Contacts({ reference }) {
 
   const handleCopy = (event) => {
     setCopied(true);
-    console.log("handleCopy event is:", event);
   };
 
   return (
