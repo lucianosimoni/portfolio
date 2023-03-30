@@ -110,7 +110,9 @@ export default function Contacts({ reference }) {
           </a>
         </div>
 
-        <h4>©️ 2023 Luciano Simoni</h4>
+        <h4 className="text-palette-black font-extralight">
+          ©️ 2023 Luciano Simoni
+        </h4>
       </div>
     </section>
   );
