@@ -3,13 +3,14 @@ module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx,svg}"],
   theme: {
     backgroundImage: {
-      "mountain-dark": "url('/src/assets/mountain-dark.webp')",
-      "mountain-dark-nobg": "url('/src/assets/mountain-dark-nobg.webp')",
+      rainforest: "url('/src/assets/rainforest.webp')",
+      "rainforest-nobg": "url('/src/assets/rainforest-nobg.webp')",
       "ai-interviewer": "url('/src/assets/ai-interviewer.webp')",
       "address-book": "url('/src/assets/address-book.webp')",
       "doodle-pattern": "url('/src/assets/doodle-pattern.webp')",
       pothole: "url('/src/assets/pothole.webp')",
       trextter: "url('/src/assets/trextter.webp')",
+      brazil: "url('/src/assets/brazil.webp')",
     },
     extend: {
       keyframes: {

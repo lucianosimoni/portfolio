@@ -15,7 +15,7 @@ export default function Contacts({ reference }) {
   return (
     <section
       ref={reference}
-      className="h-screen flex flex-col snap-center justify-center bg-cover bg-repeat-x bg-mountain-dark-nobg bg-palette-white "
+      className="h-screen flex flex-col snap-center justify-center bg-bottom bg-no-repeat bg-contain bg-rainforest-nobg bg-palette-white "
     >
       {/* ⚠️ POPUP */}
       {copied ? (
@@ -37,9 +37,9 @@ export default function Contacts({ reference }) {
       {/* MIDDLE CARDS */}
       <div className="flex-auto flex gap-12 items-center justify-center">
         {/* 🃏 EMAIL CARD*/}
-        <div className="flex flex-col gap-2 px-8 pt-4 bg-[#f7ede250] rounded-[40px] shadow-[0_5px_20px_#14213d80] relative">
+        <div className="flex flex-col gap-2 px-8 pt-4 bg-palette-white rounded-[40px] shadow-[0_5px_20px_#14213d80] relative">
           {/* ICON */}
-          <span className="absolute -left-4 -top-4">
+          <span className="absolute bg-palette-white rounded-full -left-4 -top-4">
             <EmailSvg size={34} />
           </span>
           {/* CARD'S BODY */}
@@ -67,9 +67,9 @@ export default function Contacts({ reference }) {
         </div>
 
         {/* 🃏 MOBILE CARD */}
-        <div className="flex flex-col gap-2 px-8 pt-4 bg-[#f7ede250] rounded-[40px] shadow-[0_5px_20px_#14213d80] relative">
+        <div className="flex flex-col gap-2 px-8 pt-4 bg-palette-white rounded-[40px] shadow-[0_5px_20px_#14213d80] relative">
           {/* ICON */}
-          <span className="absolute -left-4 -top-4">
+          <span className="absolute bg-palette-white rounded-full -left-4 -top-4">
             <PhoneSvg size={34} />
           </span>
           {/* CARD'S BODY */}
@@ -84,7 +84,7 @@ export default function Contacts({ reference }) {
       </div>
 
       {/* BOTTOM BUTTONS */}
-      <div className="flex flex-col gap-8 items-center bg-doodle-pattern bg-cover bg-palette-white mx-auto p-8 rounded-t-[40px] h-[150px] w-[600px]">
+      <div className="flex flex-col gap-8 items-center bg-doodle-pattern bg-cover bg-palette-white shadow-[0_0_40px_#14213d] mx-auto p-8 rounded-t-[40px] h-[150px] w-[600px]">
         <div className="flex flex-row gap-8">
           <a
             href="mailto:lucianosimonipersonal@gmail.com"
