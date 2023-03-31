@@ -44,7 +44,7 @@ export default function ProjectItem({
         <a
           target="_blank"
           href={githubLink}
-          className="cursor-pointer text-palette-black text-center w-[40%] text-sm lg:text-xl border-2 lg:border-4 h-fit py-1 lg:py-2 px-5 lg:px-6 border-palette-black hover:bg-palette-yellow font-bold rounded-full transition-[background-color]"
+          className="cursor-pointer text-palette-black text-center w-[40%] text-sm lg:text-xl border-2 lg:border-4 h-fit py-1 lg:py-2 px-5 lg:px-6 border-palette-black hover:bg-palette-green font-bold rounded-full transition-[background-color]"
         >
           GitHub
         </a>

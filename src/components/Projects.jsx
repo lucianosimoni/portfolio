@@ -28,10 +28,9 @@ export default function Projects({ reference, scrollTo, nextSectionRef }) {
     >
       {/* 🅰️TEXT */}
       <div className="h-auto flex flex-col gap-4 text-center">
-        <h1 className="text-palette-green drop-shadow-xl font-normal text-2xl md:text-3xl lg:text-6xl">
-          My projects
+        <h1 className="text-palette-green drop-shadow-md font-bold md:text-2xl lg:text-5xl">
+          My projects 📜
         </h1>
-        <span className="text-palette-black text-md">🙂</span>
       </div>
 
       {/* 🖼️ GRID */}
