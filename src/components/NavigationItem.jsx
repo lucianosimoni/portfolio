@@ -21,7 +21,7 @@ export default function NavigationItem({ onClick, name, selected }) {
   return (
     <li
       onClick={onClick}
-      className="p-[1rem] group/li my-4 cursor-pointer transition-all relative"
+      className="p-[1rem] group/li my-4 cursor-pointer drop-shadow-[0_0_5px_#f7ede2] transition-all relative"
     >
       {renderIcon()}
       <div
