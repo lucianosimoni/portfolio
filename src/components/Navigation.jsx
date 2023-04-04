@@ -15,7 +15,7 @@ export default function Navigation({
           : "invisible absolute right-0 z-[51]"
       }
     >
-      <ul>
+      <ul className="bg-[#f7ede260] rounded-2xl flex flex-col gap-4">
         <NavigationItem
           onClick={() => scrollTo(references.homeSection)}
           name={"Home"}
