@@ -15,27 +15,27 @@ export default function Contacts({ reference }) {
   return (
     <section
       ref={reference}
-      className="h-screen flex flex-col snap-center justify-center bg-bottom bg-no-repeat bg-contain bg-rainforest-nobg bg-palette-white "
+      className="h-screen flex flex-col snap-center justify-center bg-bottom bg-no-repeat bg-contain bg-section-gradient-second relative"
     >
       {/* ⚠️ POPUP */}
       {copied ? (
         <div
           onClick={() => setCopied(false)}
-          className="fixed left-0 top-0 cursor-pointer hover:bg-[#68a691] active:bg-[#264653] select-none bg-palette-green text-palette-white p-4 rounded-br-3xl transition-colors"
+          className="fixed left-0 top-0 cursor-pointer hover:bg-[#68a691] active:bg-[#264653] select-none bg-palette-green text-palette-white p-4 rounded-br-3xl transition-colors z-50"
         >
           Copied to clipboard 🤩
         </div>
       ) : null}
 
       {/* TITLE */}
-      <div className="flex-none flex justify-center mt-8">
+      <div className="flex-none flex justify-center mt-8 z-30">
         <h1 className="text-palette-green drop-shadow-md font-bold md:text-2xl lg:text-5xl">
           Get in touch! ☎️
         </h1>
       </div>
 
       {/* MIDDLE CARDS */}
-      <div className="flex-auto flex gap-12 items-center justify-center">
+      <div className="flex-auto flex gap-12 items-center justify-center z-30">
         {/* 🃏 EMAIL CARD*/}
         <div className="flex flex-col gap-2 px-8 pt-4 bg-palette-white rounded-[40px] shadow-[0_5px_20px_#14213d80] relative">
           {/* ICON */}
@@ -84,7 +84,7 @@ export default function Contacts({ reference }) {
       </div>
 
       {/* BOTTOM BUTTONS */}
-      <div className="flex flex-col gap-8 items-center bg-doodle-pattern bg-cover bg-palette-white shadow-[0_0_40px_#14213d] mx-auto p-8 rounded-t-[40px] h-[150px] w-[600px]">
+      <div className="flex flex-col gap-8 items-center bg-doodle-pattern bg-cover bg-palette-white shadow-[0_0_40px_#14213d] mx-auto p-8 rounded-t-[40px] h-[150px] w-[600px] z-30">
         <div className="flex flex-row gap-8">
           <a
             href="mailto:lucianosimonipersonal@gmail.com"
@@ -113,6 +113,9 @@ export default function Contacts({ reference }) {
           ©️ 2023 Luciano Simoni
         </h4>
       </div>
+
+      {/* BACKGROUND */}
+      <div className="bottom-0 left-0 absolute w-[100vw] h-[100vh] bg-no-repeat bg-bottom z-10 bg-rainforest-nobg" />
     </section>
   );
 }

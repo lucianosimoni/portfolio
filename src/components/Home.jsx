@@ -19,7 +19,7 @@ export default function Home({
     <section
       onClick={handleMainClick}
       ref={reference}
-      className="relative bg-palette-white h-screen w-100% snap-center"
+      className="relative bg-section-gradient-first h-screen w-100% snap-center"
     >
       {/* 🏔️ Forest Clip */}
       <div
@@ -97,7 +97,7 @@ export default function Home({
       </div>
 
       {/* 📫 Main Section */}
-      <section className="">
+      <section>
         {/* 🖌️ Luciano */}
         <LucianoSvg
           colorClass={"text-palette-green"}

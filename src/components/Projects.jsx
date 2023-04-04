@@ -15,11 +15,11 @@ export default function Projects({ reference, scrollTo, nextSectionRef }) {
   };
 
   const topBar =
-    "relative h-screen gap-8 flex flex-col border-t-0 border-b-[1rem] border-palette-black transition-[border] snap-center scrollbar-hide overflow-x-hidden overflow-y-auto bg-palette-white";
+    "relative h-screen gap-8 flex flex-col border-t-0 border-b-[1rem] border-palette-black transition-[border] snap-center scrollbar-hide overflow-x-hidden overflow-y-auto bg-section-gradient-second";
   const bottomBar =
-    "relative h-screen gap-8 flex flex-col border-t-[1rem] border-b-0 border-palette-black transition-[border] snap-center scrollbar-hide overflow-x-hidden overflow-y-auto bg-palette-white";
+    "relative h-screen gap-8 flex flex-col border-t-[1rem] border-b-0 border-palette-black transition-[border] snap-center scrollbar-hide overflow-x-hidden overflow-y-auto bg-section-gradient-second";
   const bothBar =
-    "relative h-screen gap-8 flex flex-col border-y-[1rem] border-palette-black transition-[border] snap-center scrollbar-hide overflow-x-hidden overflow-y-auto bg-palette-white";
+    "relative h-screen gap-8 flex flex-col border-y-[1rem] border-palette-black transition-[border] snap-center scrollbar-hide overflow-x-hidden overflow-y-auto bg-section-gradient-second";
 
   return (
     <section

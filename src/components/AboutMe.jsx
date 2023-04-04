@@ -12,7 +12,7 @@ export default function AboutMe({ reference, scrollTo, homeSectionRef }) {
   return (
     <section
       ref={reference}
-      className="md:p-8 lg:p-24 gap-24 grid grid-cols-2 items-center h-screen w-full relative snap-center scrollbar-hide overflow-hidden bg-palette-white"
+      className="md:p-8 lg:p-24 gap-24 grid grid-cols-2 items-center h-screen w-full relative snap-center scrollbar-hide overflow-hidden bg-section-gradient-third"
     >
       {/* 🚜 Logo */}
       <div

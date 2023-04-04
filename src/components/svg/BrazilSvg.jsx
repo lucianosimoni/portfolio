@@ -13,7 +13,10 @@ export default function BrazilSvg() {
 
   return (
     <div className="h-full w-full relative">
+      {/* BRAZIL MAP IMAGE */}
       <div className="absolute top-0 left-0 h-full w-full bg-cover bg-brazil" />
+
+      {/* AMAZONAS SVG */}
       <svg
         onLoad={handleSVGLoad}
         xmlns="http://www.w3.org/2000/svg"

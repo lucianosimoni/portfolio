@@ -13,6 +13,15 @@ module.exports = {
       brazil: "url('/src/assets/brazil.webp')",
 
       "home-gradient-to-b": "linear-gradient(to bottom, #14213d00, #14213d)",
+
+      "section-gradient-first":
+        "linear-gradient(to bottom right, #F7EDE2, #FFDAC6, #FFE4D6)",
+      "section-gradient-second":
+        "linear-gradient(to bottom right, #FFDAC6, #FFE4D6, #FFDAC6)",
+      "section-gradient-third":
+        "linear-gradient(to bottom right, #FFE4D6, #FFDAC6, #F7EDE2)",
+      "section-gradient-forth":
+        "linear-gradient(to bottom right, #FFDAC6, #F7EDE2, #FFDAC6)",
     },
     extend: {
       keyframes: {

@@ -124,7 +124,7 @@ export default function App() {
       {/* 🧠 AI */}
       <section
         ref={aiSection}
-        className="h-screen flex flex-col items-center snap-center justify-center bg-palette-white"
+        className="h-screen flex flex-col items-center snap-center justify-center bg-section-gradient-forth"
       >
         <h1 className="text-2xl">AI Ask | Skills</h1>
         <span>Soon to be added...</span>
@@ -134,7 +134,7 @@ export default function App() {
       {/* 📖 EDUCATION */}
       <section
         ref={educationSection}
-        className="h-screen flex flex-col items-center snap-center justify-center bg-palette-white"
+        className="h-screen flex flex-col items-center snap-center justify-center bg-section-gradient-first"
       >
         <h1 className="text-2xl">Education</h1>
         <span>Soon to be added...</span>
