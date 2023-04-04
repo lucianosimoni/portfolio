@@ -1,4 +1,5 @@
 import ProjectItem from "./ProjectItem";
+import TransitionSvg from "./svg/projects/TransitionSvg";
 import { useState } from "react";
 
 export default function Projects({ reference, scrollTo, nextSectionRef }) {
@@ -14,11 +15,11 @@ export default function Projects({ reference, scrollTo, nextSectionRef }) {
   };
 
   const topBar =
-    "h-screen p-8 pb-0 gap-8 flex flex-col border-t-0 border-b-[1rem] border-palette-black transition-[border] snap-center scrollbar-hide overflow-x-hidden overflow-y-auto bg-palette-white";
+    "relative h-screen gap-8 flex flex-col border-t-0 border-b-[1rem] border-palette-black transition-[border] snap-center scrollbar-hide overflow-x-hidden overflow-y-auto bg-palette-white";
   const bottomBar =
-    "h-screen p-8 pb-0 gap-8 flex flex-col border-t-[1rem] border-b-0 border-palette-black transition-[border] snap-center scrollbar-hide overflow-x-hidden overflow-y-auto bg-palette-white";
+    "relative h-screen gap-8 flex flex-col border-t-[1rem] border-b-0 border-palette-black transition-[border] snap-center scrollbar-hide overflow-x-hidden overflow-y-auto bg-palette-white";
   const bothBar =
-    "h-screen p-8 pb-0 gap-8 flex flex-col border-y-[1rem] border-palette-black transition-[border] snap-center scrollbar-hide overflow-x-hidden overflow-y-auto bg-palette-white";
+    "relative h-screen gap-8 flex flex-col border-y-[1rem] border-palette-black transition-[border] snap-center scrollbar-hide overflow-x-hidden overflow-y-auto bg-palette-white";
 
   return (
     <section
@@ -26,15 +27,17 @@ export default function Projects({ reference, scrollTo, nextSectionRef }) {
       onScroll={handleScroll}
       className={isAtTop ? topBar : isAtBottom ? bottomBar : bothBar}
     >
+      <TransitionSvg />
+
       {/* 🅰️TEXT */}
-      <div className="h-auto flex flex-col gap-4 text-center">
+      <div className="h-auto flex flex-col gap-4 text-center mt-8 z-20">
         <h1 className="text-palette-green drop-shadow-md font-bold md:text-2xl lg:text-5xl">
           My projects 📜
         </h1>
       </div>
 
       {/* 🖼️ GRID */}
-      <div className="h-auto w-fit mx-auto grid gap-8 grid-cols-2 grid-rows-2">
+      <div className="h-auto w-fit mx-auto grid gap-8 grid-cols-2 grid-rows-2 z-20">
         <ProjectItem
           title={"AI Interviewer"}
           description={
@@ -88,7 +91,7 @@ export default function Projects({ reference, scrollTo, nextSectionRef }) {
       </div>
 
       {/* ⬇️ BOTTOM TRANSITION */}
-      <div className="flex-auto flex justify-center items-end">
+      <div className="flex-auto flex justify-center items-end z-20">
         <div
           onClick={() => scrollTo(nextSectionRef)}
           className="hover:cursor-pointer group-[bottom-transition]: h-[150px] w-[300px] flex items-center justify-center rounded-t-full drop-shadow-xl bg-palette-black"
