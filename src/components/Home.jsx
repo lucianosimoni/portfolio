@@ -25,14 +25,14 @@ export default function Home({
       <div
         className={
           splash
-            ? "clip-path-inset-[0_calc(50%-8rem)_0_calc(50%-8rem)] animate-openning-clip z-40 absolute bg-rainforest bg-cover h-screen w-full transition-[clip-path] ease-in-out duration-1000"
+            ? "clip-path-inset-[0_calc(50%-8rem)_0_calc(50%-8rem)] animate-openning-clip z-50 absolute bg-rainforest bg-cover h-screen w-full transition-[clip-path] ease-in-out duration-1000"
             : homeVisible
             ? "clip-path-inset-[0_11rem_0_calc(100%-11rem-20%)] z-50 absolute bg-rainforest bg-cover h-screen w-full transition-[clip-path] ease-in-out duration-1000"
             : "clip-path-inset-[0_calc(50%-8rem)_0_calc(50%-8rem)] z-50 absolute bg-rainforest bg-cover h-screen w-full transition-[clip-path] ease-in-out duration-1000"
         }
       >
         {/* 🧊 Gradient */}
-        <span className="w-full h-[40%] absolute right-[11rem] bottom-0 z-50 bg-home-gradient-to-b"></span>
+        <div className="w-full h-[40%] absolute right-[11rem] bottom-0 z-50 bg-home-gradient-to-b" />
 
         <section className="flex h-full justify-center items-center">
           {/* 🖌️ Luciano */}

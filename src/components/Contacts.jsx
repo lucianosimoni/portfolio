@@ -39,7 +39,7 @@ export default function Contacts({ reference }) {
         {/* 🃏 EMAIL CARD*/}
         <div className="flex flex-col gap-2 px-8 pt-4 bg-palette-white rounded-[40px] shadow-[0_5px_20px_#14213d80] relative">
           {/* ICON */}
-          <span className="absolute bg-palette-white rounded-full -left-4 -top-4">
+          <span className="absolute bg-palette-yellow p-1 rounded-full -left-4 -top-4">
             <EmailSvg size={34} />
           </span>
           {/* CARD'S BODY */}
@@ -69,7 +69,7 @@ export default function Contacts({ reference }) {
         {/* 🃏 MOBILE CARD */}
         <div className="flex flex-col gap-2 px-8 pt-4 bg-palette-white rounded-[40px] shadow-[0_5px_20px_#14213d80] relative">
           {/* ICON */}
-          <span className="absolute bg-palette-white rounded-full -left-4 -top-4">
+          <span className="absolute bg-palette-yellow p-1 rounded-full -left-4 -top-4">
             <PhoneSvg size={34} />
           </span>
           {/* CARD'S BODY */}
