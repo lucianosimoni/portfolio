@@ -21,6 +21,8 @@ export default function TransitionSvg() {
   const quarterRightSpace = halfRightSpace / 2;
   const twentyPlusHalfRightSpace = twentyPercent + halfRightSpace;
 
+  const gradientToColor = "#293241";
+
   return (
     <svg
       width={width}
@@ -37,8 +39,20 @@ export default function TransitionSvg() {
             l ${-halfRightSpace} 0
             c ${-twentyPlusHalfRightSpace} 0, ${-twentyPlusHalfRightSpace} ${-twentyPlusHalfRightSpace}, ${-twentyPlusHalfRightSpace} ${-twentyPlusHalfRightSpace}
             z`}
-        fill="currentColor"
+        fill="url(#projectsSvgGradient)"
       />
+      <defs>
+        <linearGradient
+          id="projectsSvgGradient"
+          x1="0%"
+          x2="0%"
+          y1="0%"
+          y2="100%"
+        >
+          <stop offset="0%" stopColor="currentColor" />
+          <stop offset="100%" stopColor={gradientToColor} />
+        </linearGradient>
+      </defs>
     </svg>
   );
 }

@@ -25,12 +25,15 @@ export default function Home({
       <div
         className={
           splash
-            ? "clip-path-inset-[0_calc(50%-8rem)_0_calc(50%-8rem)] animate-openning-clip z-50 absolute bg-rainforest bg-cover h-screen w-full transition-[clip-path] ease-in-out duration-1000"
+            ? "clip-path-inset-[0_calc(50%-8rem)_0_calc(50%-8rem)] animate-openning-clip z-40 absolute bg-rainforest bg-cover h-screen w-full transition-[clip-path] ease-in-out duration-1000"
             : homeVisible
             ? "clip-path-inset-[0_11rem_0_calc(100%-11rem-20%)] z-50 absolute bg-rainforest bg-cover h-screen w-full transition-[clip-path] ease-in-out duration-1000"
             : "clip-path-inset-[0_calc(50%-8rem)_0_calc(50%-8rem)] z-50 absolute bg-rainforest bg-cover h-screen w-full transition-[clip-path] ease-in-out duration-1000"
         }
       >
+        {/* 🧊 Gradient */}
+        <span className="w-full h-[40%] absolute right-[11rem] bottom-0 z-50 bg-home-gradient-to-b"></span>
+
         <section className="flex h-full justify-center items-center">
           {/* 🖌️ Luciano */}
           <LucianoSvg
@@ -38,38 +41,38 @@ export default function Home({
             homeVisible={homeVisible}
           />
         </section>
-      </div>
 
-      {/* 🔽 Down Arrow */}
-      <div
-        onClick={
-          homeVisible
-            ? () => scrollTo(scrollToReferences.projectsSection)
-            : null
-        }
-        className={
-          splash
-            ? "-rotate-90 animate-opacity-fade-in-2s-delay z-50 absolute left-[calc(50%-2.75rem)] bottom-4 transition-[left] ease-in-out duration-1000"
-            : homeVisible
-            ? "rotate-0 left-[calc(100%-11rem-10%-2.75rem)] animate-pulse z-50 absolute bottom-4 transition-[left_rotate] ease-in-out duration-1000"
-            : "-rotate-90 animate-pulse z-50 absolute left-[calc(50%-2.75rem)] bottom-4 transition-[left] ease-in-out duration-1000"
-        }
-      >
-        <svg
-          width="88"
-          height="48"
-          fill="none"
-          className="hover:scale-110 cursor-pointer drop-shadow-2xl text-palette-white flex justify-center transition-[transform]"
-          xmlns="http://www.w3.org/2000/svg"
+        {/* 🔽 Down Arrow */}
+        <div
+          onClick={
+            homeVisible
+              ? () => scrollTo(scrollToReferences.projectsSection)
+              : null
+          }
+          className={
+            splash
+              ? "-rotate-90 animate-opacity-fade-in-2s-delay z-50 absolute left-[calc(50%-2.75rem)] bottom-12 transition-[left] ease-in-out duration-1000"
+              : homeVisible
+              ? "rotate-0 left-[calc(100%-11rem-10%-2.75rem)] animate-pulse z-50 absolute bottom-4 transition-[left_rotate] ease-in-out duration-1000"
+              : "-rotate-90 animate-pulse z-50 absolute left-[calc(50%-2.75rem)] bottom-12 transition-[left] ease-in-out duration-1000"
+          }
         >
-          <path
-            d="M10 10 L44 40 L78 10"
-            stroke="currentColor"
-            strokeWidth="4"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </svg>
+          <svg
+            width="88"
+            height="48"
+            fill="none"
+            className="hover:scale-110 cursor-pointer text-palette-white flex justify-center transition-[transform] overflow-visible"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10 10 L44 40 L78 10"
+              stroke="currentColor"
+              strokeWidth="20"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </div>
       </div>
 
       {/* 🐶 Doggo Logo */}
