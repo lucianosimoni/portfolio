@@ -1,5 +1,5 @@
 import doggoImage from "../assets/doggo.webp";
-import LucianoSvg from "../components/svg/LucianoSvg";
+import LucianoImage from "../components/LucianoImage";
 
 export default function Home({
   reference,
@@ -36,9 +36,9 @@ export default function Home({
 
         <section className="flex h-full justify-center items-center">
           {/* 🖌️ Luciano */}
-          <LucianoSvg
-            colorClass={"text-palette-white"}
+          <LucianoImage
             homeVisible={homeVisible}
+            bgImage={"bg-luciano-white"}
           />
         </section>
 
@@ -99,11 +99,9 @@ export default function Home({
       {/* 📫 Main Section */}
       <section>
         {/* 🖌️ Luciano */}
-        <LucianoSvg
-          colorClass={"text-palette-green"}
-          homeVisible={homeVisible}
-        />
+        <LucianoImage homeVisible={homeVisible} bgImage={"bg-luciano-green"} />
 
+        <div className="absolute top-0 left-0 bg-luciano-green" />
         {/* 🏡 Home Section */}
         {homeVisible ? (
           // LucianoSvg top pos in lg: h7, rest h5

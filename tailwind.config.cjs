@@ -11,6 +11,8 @@ module.exports = {
       pothole: "url('/src/assets/pothole.webp')",
       trextter: "url('/src/assets/trextter.webp')",
       brazil: "url('/src/assets/brazil.webp')",
+      "luciano-green": "url('/src/assets/luciano-green.webp')",
+      "luciano-white": "url('/src/assets/luciano-white.webp')",
 
       "home-gradient-to-b": "linear-gradient(to bottom, #14213d00, #14213d)",
 

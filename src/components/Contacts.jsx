@@ -30,7 +30,7 @@ export default function Contacts({ reference }) {
       {/* TITLE */}
       <div className="flex-none flex justify-center mt-8 z-30">
         <h1 className="text-palette-green drop-shadow-md font-bold md:text-2xl lg:text-5xl">
-          Get in touch! ☎️
+          Get in touch ☎️
         </h1>
       </div>
 
