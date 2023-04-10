@@ -1,7 +1,7 @@
 export default function ProjectItem({
-  title = "AI Interviewer",
-  description = "Based in London. Fascinated with problem-solving. Always providing a code with the future in mind.",
-  stack = "React.js ▪️ JavaScript ▪️ CSS ▪️ PostgreSQL",
+  title,
+  description,
+  stack,
   previewLink,
   githubLink,
   imgName,
@@ -14,19 +14,19 @@ export default function ProjectItem({
   };
 
   return (
-    <div className="bg-palette-white w-[335px] flex flex-col h-auto lg:w-[435px] p-2 rounded-[1.4rem] lg:rounded-[2.125rem] border-2 lg:border-4 border-palette-black shadow-btn-thick">
+    <div className="bg-palette-white flex flex-grow flex-col w-full p-2 rounded-[1.4rem] lg:rounded-[2.125rem] border-2 lg:border-4 border-palette-black shadow-btn-thick">
       {/* 🖼️ IMG */}
       <div
-        className={`${images[imgName]} border-1 bg-cover bg-center h-[200px] w-full cursor-pointer hover:scale-[101%] rounded-[23px] border-palette-black transition-all duration-500`}
-      ></div>
+        className={`${images[imgName]} h-[100px] lg:h-[130px] xl:h-[200px] border-1 bg-cover bg-center w-full cursor-pointer hover:scale-[101%] rounded-[23px] border-palette-black transition-all duration-500`}
+      />
 
       {/* 📖 TEXTS */}
-      <div className="h-auto flex flex-col text-palette-black py-2 gap-2">
-        <h2 className="text-palette-yellow text-3xl font-bold drop-shadow-md">
+      <div className="h-auto flex flex-col text-palette-black py-2 gap-2 hover:cursor-default">
+        <h2 className="text-palette-yellow text-xl lg:text-2xl xl:text-3xl font-bold drop-shadow-md">
           {title}
         </h2>
-        <p>{description}</p>
-        <span>
+        <p className="text-xs">{description}</p>
+        <span className="text-xs lg:text-sm h-auto">
           <b className="text-palette-green drop-shadow-xl">Tech | </b>
           {stack}
         </span>

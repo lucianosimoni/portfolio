@@ -25,7 +25,7 @@ export default function AboutMe({ reference, scrollTo, homeSectionRef }) {
       </div>
 
       {/* 📄 TEXT SECTION */}
-      <div className="flex flex-col md:text-xs lg:text-base gap-4 first:gap-8">
+      <div className="flex flex-col text-xs lg:text-sm gap-4 first:gap-8">
         <h2 className="text-palette-yellow drop-shadow-md font-bold md:text-2xl lg:text-5xl">
           Hello there 🙂
         </h2>
@@ -55,7 +55,7 @@ export default function AboutMe({ reference, scrollTo, homeSectionRef }) {
           className={
             showingLess
               ? "hidden bg-slate-100 flex-col gap-4 transition-all duration-1000"
-              : "animate-opacity-fade-in-0s-delay flex flex-col gap-4 transition-all duration-1000"
+              : "animate-opacity-fade-in-0s-delay flex flex-col gap-4 lg:text-xs xl:text-sm transition-all duration-1000"
           }
         >
           <p>

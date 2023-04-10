@@ -36,21 +36,20 @@ export default function App() {
 
     // Deboucing variables
     let timeoutId;
-    const delay = 200;
+    const delay = 100;
 
     const handleScroll = () => {
       const scrollPos = container.scrollTop;
 
-      for (let i = 0; i < sections.length; i++) {
-        const sectionPos = sections[i].current.offsetTop;
+      sections.forEach((section) => {
+        const sectionPos = section.current.offsetTop - 50;
         if (
           scrollPos >= sectionPos &&
-          scrollPos < sectionPos + sections[i].current.offsetHeight
+          scrollPos < sectionPos + section.current.offsetHeight + 50
         ) {
-          setSelectedSection(sections[i]);
-          break;
+          setSelectedSection(section);
         }
-      }
+      });
     };
 
     const debouncedHandleScroll = () => {

@@ -115,7 +115,7 @@ export default function Contacts({ reference }) {
       </div>
 
       {/* BACKGROUND */}
-      <div className="bottom-0 left-0 absolute w-[100vw] h-[100vh] bg-no-repeat bg-contain bg-bottom z-10 bg-rainforest-nobg" />
+      <div className="bottom-0 left-0 absolute   w-screen h-[100vh] bg-no-repeat bg-contain bg-bottom z-10 bg-rainforest-nobg" />
     </section>
   );
 }
