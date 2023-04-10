@@ -31,7 +31,7 @@ export default function Projects({ reference, scrollTo, nextSectionRef }) {
           className="overflow-visible w-screen"
           centeredSlides={true}
         >
-          <SwiperSlide className="m-2">
+          <SwiperSlide className="m-2 flex justify-center">
             <ProjectItem
               title={"AI Interviewer"}
               description={
@@ -47,7 +47,7 @@ export default function Projects({ reference, scrollTo, nextSectionRef }) {
               imgName="ai-interviewer"
             />
           </SwiperSlide>
-          <SwiperSlide className="m-2">
+          <SwiperSlide className="m-2 flex justify-center">
             <ProjectItem
               title={"Potholes"}
               description={
@@ -63,7 +63,7 @@ export default function Projects({ reference, scrollTo, nextSectionRef }) {
               imgName="pothole"
             />
           </SwiperSlide>
-          <SwiperSlide className="m-2">
+          <SwiperSlide className="m-2 flex justify-center">
             <ProjectItem
               title={"Trextter"}
               description={
@@ -81,7 +81,7 @@ export default function Projects({ reference, scrollTo, nextSectionRef }) {
               imgName="trextter"
             />
           </SwiperSlide>
-          <SwiperSlide className="m-2">
+          <SwiperSlide className="m-2 flex justify-center">
             <ProjectItem
               title={"Address Book"}
               description={
