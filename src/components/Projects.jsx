@@ -28,7 +28,7 @@ export default function Projects({ reference, scrollTo, nextSectionRef }) {
           freeMode={true}
           pagination={{ clickable: true }}
           modules={[FreeMode]}
-          className="overflow-visible w-screen"
+          className="overflow-visible w-screen cursor-col-resize"
           centeredSlides={true}
         >
           <SwiperSlide className="m-2 flex justify-center">
