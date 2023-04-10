@@ -14,7 +14,7 @@ export default function ProjectItem({
   };
 
   return (
-    <div className="bg-palette-white flex flex-grow flex-col w-full p-2 rounded-[1.4rem] lg:rounded-[2.125rem] border-2 lg:border-4 border-palette-black shadow-btn-thick">
+    <div className="bg-palette-white flex flex-grow flex-col w-[80%] p-2 rounded-[1.4rem] lg:rounded-[2.125rem] border-2 lg:border-4 border-palette-black shadow-btn-thick">
       {/* 🖼️ IMG */}
       <div
         className={`${images[imgName]} h-[100px] lg:h-[130px] xl:h-[200px] border-1 bg-cover bg-center w-full cursor-pointer hover:scale-[101%] rounded-[23px] border-palette-black transition-all duration-500`}
