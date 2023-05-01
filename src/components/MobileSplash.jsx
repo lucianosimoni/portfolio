@@ -1,6 +1,6 @@
 export default function MobileSplash() {
   return (
-    <div className="z-[51] visible md:invisible fixed flex flex-col items-center justify-center h-screen w-screen overflow-hidden bg-palette-white text-palette-black">
+    <div className="z-[52] visible md:invisible fixed flex flex-col items-center justify-center h-screen w-screen overflow-hidden bg-palette-white text-palette-black">
       <h1 className="animate-opacity-fade-in-0s-delay text-palette-green text-xl">
         <b>Hello there!</b>
       </h1>

@@ -11,7 +11,7 @@ export default function Navigation({
     <nav
       className={
         homeVisible
-          ? "absolute h-full flex items-center right-4 z-[51] group/nav animate-opacity-fade-in-0s-delay"
+          ? "invisible sm:visible absolute h-full flex items-center right-4 z-[51] group/nav animate-opacity-fade-in-0s-delay"
           : "invisible absolute right-0 z-[51]"
       }
     >
