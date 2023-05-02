@@ -14,6 +14,17 @@ module.exports = {
       "luciano-green": "url('/src/assets/luciano-green.webp')",
       "luciano-white": "url('/src/assets/luciano-white.webp')",
 
+      "ai-interviewer-transparent":
+        "url('/src/assets/ai-interviewer-transparent.webp')",
+      "ai-interviewer-dashboard":
+        "url('/src/assets/ai-interviewer-dashboard.webp')",
+      // "address-book-transparent":
+      //   "url('/src/assets/address-book-transparent.webp')",
+      // "pothole-transparent": "url('/src/assets/pothole-transparent.webp')",
+      // "trextter-transparent": "url('/src/assets/trextter-transparent.webp')",
+
+      "rdm-design": "url('/src/assets/rdm-design.webp')",
+
       "home-gradient-to-b": "linear-gradient(to bottom, #14213d00, #14213d)",
 
       "section-gradient-first":
@@ -88,6 +99,7 @@ module.exports = {
         "palette-pink": "#f5cac3",
         "palette-yellow": "#f6bd60",
         "palette-black": "#14213d",
+        "palette-red": "#ee6c4d",
       },
       dropShadow: {
         "btn-thick": "-0.5rem 0.5rem 0 #14213d",

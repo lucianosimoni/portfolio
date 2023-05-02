@@ -5,6 +5,7 @@ export default function ProjectItem({
   previewLink,
   githubLink,
   imgName,
+  setViewMoreData,
 }) {
   const images = {
     "ai-interviewer": "bg-ai-interviewer ",
@@ -25,8 +26,8 @@ export default function ProjectItem({
         <h2 className="text-palette-yellow text-xl lg:text-2xl xl:text-3xl font-bold drop-shadow-md">
           {title}
         </h2>
-        <p className="text-xs">{description}</p>
-        <span className="text-xs lg:text-sm h-auto">
+        <p className="text-xs lg:text-base">{description}</p>
+        <span className="text-xs lg:text-base h-auto">
           <b className="text-palette-green drop-shadow-xl">Tech | </b>
           {stack}
         </span>
@@ -41,13 +42,19 @@ export default function ProjectItem({
         >
           Preview
         </a>
-        <a
+        <button
+          onClick={() => setViewMoreData({ visible: true, title })}
+          className="cursor-pointer text-palette-black text-center w-[40%] text-sm lg:text-xl border-2 lg:border-4 h-fit py-1 lg:py-2 px-5 lg:px-6 border-palette-black hover:bg-palette-green font-bold rounded-full transition-[background-color] noselect"
+        >
+          View more
+        </button>
+        {/* <a
           target="_blank"
           href={githubLink}
           className="cursor-pointer text-palette-black text-center w-[40%] text-sm lg:text-xl border-2 lg:border-4 h-fit py-1 lg:py-2 px-5 lg:px-6 border-palette-black hover:bg-palette-green font-bold rounded-full transition-[background-color] noselect"
         >
           GitHub
-        </a>
+        </a> */}
       </div>
     </div>
   );
