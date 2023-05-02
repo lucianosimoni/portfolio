@@ -18,6 +18,8 @@ module.exports = {
         "url('/src/assets/ai-interviewer-transparent.webp')",
       "ai-interviewer-dashboard":
         "url('/src/assets/ai-interviewer-dashboard.webp')",
+      "ai-interviewer-training-data":
+        "url('/src/assets/ai-interviewer-training-data.webp')",
       // "address-book-transparent":
       //   "url('/src/assets/address-book-transparent.webp')",
       // "pothole-transparent": "url('/src/assets/pothole-transparent.webp')",

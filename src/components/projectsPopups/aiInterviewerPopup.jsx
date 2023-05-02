@@ -5,7 +5,7 @@ export default function AiInterviewerPopup({ setViewMoreData }) {
         {/* Intro */}
         <section>
           <div className="flex flex-row">
-            <h1 className="font-bold text-4xl mb-4 text-palette-black">
+            <h1 className="font-bold text-4xl my-4 text-palette-black">
               AI Interviewer
             </h1>
             <span className="font-thin text-2xl text-palette-green ml-auto mr-8">
@@ -23,7 +23,7 @@ export default function AiInterviewerPopup({ setViewMoreData }) {
 
         {/* The Idea Behind it */}
         <section>
-          <h2 className="font-bold sm:text-lg lg:text-2xl mb-4 text-palette-black">
+          <h2 className="font-bold sm:text-lg text-center lg:text-2xl mb-4 mt-8 text-palette-black">
             The idea behind it
           </h2>
           <p className="sm:text-base lg:text-lg text-palette-black mb-3">
@@ -49,7 +49,7 @@ export default function AiInterviewerPopup({ setViewMoreData }) {
 
         {/* Frontend */}
         <section>
-          <h2 className="font-bold sm:text-lg lg:text-2xl mb-4 text-palette-black">
+          <h2 className="font-bold sm:text-lg text-center lg:text-2xl mb-4 mt-8 text-palette-black">
             Frontend
             <i className="text-palette-black opacity-50">
               {" "}
@@ -58,7 +58,7 @@ export default function AiInterviewerPopup({ setViewMoreData }) {
           </h2>
 
           <div className="flex flex-row">
-            <p className="sm:text-base lg:text-lg text-palette-black mb-3 w-fit">
+            <p className="sm:text-base lg:text-lg text-palette-black mb-3 w-fit mr-8">
               I choose React.js for this project, because it is the main
               Framework I use for Frontend. Also react comes randy when working
               alongside big Design libraries like TailwindCSS (Which was
@@ -71,23 +71,36 @@ export default function AiInterviewerPopup({ setViewMoreData }) {
 
         {/* Backend */}
         <section>
-          <h2 className="font-bold sm:text-lg lg:text-2xl my-4 text-palette-black">
+          <h2 className="font-bold sm:text-lg text-center lg:text-2xl mb-4 mt-8 text-palette-black">
             Backend
             <i className="text-palette-black opacity-50">
               {" "}
               - Node.js | OpenAI | Express.js | PostgreSQL
             </i>
           </h2>
-          <p className="sm:text-base lg:text-lg text-palette-black mb-3">
-            AI Interviewer came up as an Idea for my bootcamp's final project,
-            to showcase all of the skills I aquired during the 6 months of
-            study.
-          </p>
+          <div className="flex flex-row">
+            <div className="h-[350px] w-full bg-ai-interviewer-training-data bg-contain bg-no-repeat bg-center rounded-2xl"></div>
+
+            <div className="w-fit ml-8">
+              <p className="sm:text-base lg:text-lg text-palette-black mb-3">
+                The backend was made to store the Environment variables in a
+                safe place, and to manage Data storage and manipulation thought
+                PostgreSQL and Prisma, as well as the Speech recognition and the
+                Custom Trained AI model from OpenAI.
+              </p>
+              <p className="sm:text-base lg:text-lg text-palette-black mb-3">
+                Using the normal models from OpenAI wasn't enought to my
+                project, it had to be a little bit better, more specific to the
+                project's needs. So I opted to train a model using many
+                different possibilities.
+              </p>
+            </div>
+          </div>
         </section>
 
         {/* RDM Design */}
         <section>
-          <h2 className="font-bold sm:text-lg lg:text-2xl mb-4 text-palette-black">
+          <h2 className="font-bold sm:text-lg text-center lg:text-2xl mb-4 mt-8 text-palette-black">
             RDM Design
           </h2>
           <p className="sm:text-base lg:text-lg text-palette-black mb-3">
@@ -102,29 +115,36 @@ export default function AiInterviewerPopup({ setViewMoreData }) {
           <div className="sm:h-[200px] lg:h-[400px] w-full bg-rdm-design bg-contain bg-no-repeat bg-center rounded-2xl bg-palette-green"></div>
         </section>
 
+        {/* Bottom Buttons */}
         <section>
           <div className="h-auto flex gap-2 items-end flex-grow mt-4">
             <a
               target="_blank"
               href="https://ai-interviewer-gh3q.onrender.com"
-              className="cursor-pointer text-palette-black text-center w-[60%] ml-2 mb-2 shadow-btn-thick hover:shadow-btn-thick-hover active:shadow-btn-thick-click hover:-translate-x-btn-hover hover:translate-y-btn-hover active:-translate-x-btn-click active:translate-y-btn-click transform-gpu bg-palette-yellow border-2 lg:border-4 border-palette-black text-sm lg:text-xl font-bold rounded-full py-1 lg:py-2 px-8 lg:px-16 transition-[box-shadow_translate] duration-200 noselect"
+              className="cursor-pointer text-palette-black text-center w-[40%] ml-2 mb-2 shadow-btn-thick hover:shadow-btn-thick-hover active:shadow-btn-thick-click hover:-translate-x-btn-hover hover:translate-y-btn-hover active:-translate-x-btn-click active:translate-y-btn-click transform-gpu bg-palette-yellow border-2 lg:border-4 border-palette-black text-sm lg:text-xl font-bold rounded-full py-1 lg:py-2 px-8 lg:px-16 transition-[box-shadow_translate] duration-200 noselect"
             >
               Preview the Live version
             </a>
             <a
               target="_blank"
               href="https://github.com/lucianosimoni/ai-interviewer-client"
-              className="cursor-pointer text-palette-black text-center w-[40%] text-sm lg:text-xl border-2 lg:border-4 h-fit py-1 lg:py-2 px-5 lg:px-6 border-palette-black hover:bg-palette-green font-bold rounded-full transition-[background-color] noselect"
+              className="cursor-pointer text-palette-black text-center w-[25%] text-sm lg:text-xl border-2 lg:border-4 h-fit py-1 lg:py-2 px-5 lg:px-6 border-palette-black hover:bg-palette-green font-bold rounded-full transition-[background-color] noselect"
             >
               GitHub Frontend
             </a>
             <a
               target="_blank"
               href="https://github.com/lucianosimoni/ai-interviewer-server"
-              className="cursor-pointer text-palette-black text-center w-[40%] text-sm lg:text-xl border-2 lg:border-4 h-fit py-1 lg:py-2 px-5 lg:px-6 border-palette-black hover:bg-palette-green font-bold rounded-full transition-[background-color] noselect"
+              className="cursor-pointer text-palette-black text-center w-[25%] text-sm lg:text-xl border-2 lg:border-4 h-fit py-1 lg:py-2 px-5 lg:px-6 border-palette-black hover:bg-palette-green font-bold rounded-full transition-[background-color] noselect"
             >
               GitHub Backend
             </a>
+            <button
+              className="cursor-pointer text-palette-black text-center w-[10%] text-sm lg:text-xl border-2 lg:border-4 h-fit py-1 lg:py-2 px-5 lg:px-6 border-palette-black hover:bg-palette-red font-bold rounded-full transition-[background-color] noselect"
+              onClick={() => setViewMoreData({ visible: false, title: "" })}
+            >
+              Close
+            </button>
           </div>
         </section>
 
