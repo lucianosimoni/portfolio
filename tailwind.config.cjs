@@ -20,12 +20,20 @@ module.exports = {
         "url('/src/assets/ai-interviewer-dashboard.webp')",
       "ai-interviewer-training-data":
         "url('/src/assets/ai-interviewer-training-data.webp')",
-      // "address-book-transparent":
-      //   "url('/src/assets/address-book-transparent.webp')",
-      // "pothole-transparent": "url('/src/assets/pothole-transparent.webp')",
-      // "trextter-transparent": "url('/src/assets/trextter-transparent.webp')",
+      "ai-interviewer-rdm-design":
+        "url('/src/assets/ai-interviewer-rdm-design.webp')",
 
-      "rdm-design": "url('/src/assets/rdm-design.webp')",
+      "address-book-transparent":
+        "url('/src/assets/address-book-transparent.webp')",
+      "address-book-main": "url('/src/assets/address-book-main.webp')",
+      "address-book-register": "url('/src/assets/address-book-register.webp')",
+      "address-book-meetings": "url('/src/assets/address-book-meetings.webp')",
+
+      "potholes-transparent": "url('/src/assets/potholes-transparent.webp')",
+      "potholes-main": "url('/src/assets/potholes-main.webp')",
+
+      "trextter-transparent": "url('/src/assets/trextter-transparent.webp')",
+      "trextter-main": "url('/src/assets/trextter-main.webp')",
 
       "home-gradient-to-b": "linear-gradient(to bottom, #14213d00, #14213d)",
 

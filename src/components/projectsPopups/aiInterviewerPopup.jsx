@@ -112,12 +112,12 @@ export default function AiInterviewerPopup({ setViewMoreData }) {
             achieve in the given time frame.
           </p>
 
-          <div className="sm:h-[200px] lg:h-[400px] w-full bg-rdm-design bg-contain bg-no-repeat bg-center rounded-2xl bg-palette-green"></div>
+          <div className="sm:h-[200px] lg:h-[400px] w-full bg-ai-interviewer-rdm-design bg-contain bg-no-repeat bg-center rounded-2xl bg-palette-green"></div>
         </section>
 
         {/* Bottom Buttons */}
         <section>
-          <div className="h-auto flex gap-2 items-end flex-grow mt-4">
+          <div className="h-auto flex gap-2 items-end justify-center flex-grow mt-4">
             <a
               target="_blank"
               href="https://ai-interviewer-gh3q.onrender.com"

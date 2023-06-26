@@ -6,7 +6,6 @@ import { FreeMode } from "swiper";
 import "swiper/css";
 import "swiper/css/free-mode";
 import { useState } from "react";
-import ProjectPopup from "./ProjectPopup";
 import AiInterviewerPopup from "./projectsPopups/aiInterviewerPopup";
 import PotholesPopup from "./projectsPopups/potholesPopup";
 import AddressBookPopup from "./projectsPopups/addressBookPopup";
